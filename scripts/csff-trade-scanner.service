@@ -1,0 +1,16 @@
+[Unit]
+Description=CSFF intraday trade scanner (during US market)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=portfolio
+Group=portfolio
+WorkingDirectory=/opt/euro_optionstrat/csff
+EnvironmentFile=-/etc/portfoliomonitor/csff.env
+ExecStart=/opt/euro_optionstrat/.venv/bin/python scanner/ff_trade_scanner.py \
+    --universe /opt/euro_optionstrat/static/csff/reports/universe/latest_candidates.csv
+
+[Install]
+WantedBy=multi-user.target

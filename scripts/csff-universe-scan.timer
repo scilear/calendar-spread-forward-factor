@@ -1,0 +1,10 @@
+[Unit]
+Description=CSFF overnight universe scan timer
+
+[Timer]
+OnCalendar=Mon..Fri 11:30:00 Europe/Paris
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

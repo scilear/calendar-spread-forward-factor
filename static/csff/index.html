@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSFF — Calendar Spread Forward Factor</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <nav class="nav">
+    <a href="/" class="nav-back">&larr; Strategy Builder</a>
+    <span class="nav-title">Calendar Spread Forward Factor</span>
+    <span id="nav-status" class="nav-status"></span>
+  </nav>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <h3>Reports</h3>
+      <div id="report-list" class="report-list">
+        <div class="loading">Loading reports...</div>
+      </div>
+    </aside>
+
+    <main class="main" id="main">
+      <div class="toolbar">
+        <div class="ticker-input-group">
+          <label for="ticker-input">Tickers</label>
+          <input id="ticker-input" type="text"
+                 placeholder="AAPL, NVDA, AMD, MSFT, SPY, QQQ"
+                 class="ticker-input">
+          <button id="btn-save-tickers" class="btn btn-sm">Save</button>
+        </div>
+        <div class="toolbar-actions">
+          <button id="btn-scan-universe" class="btn">Full Universe Scan</button>
+          <button id="btn-scan-intraday" class="btn">Intraday Scan</button>
+          <button id="btn-refresh-all" class="btn" disabled>Refresh All</button>
+        </div>
+      </div>
+
+      <div id="content-area" class="content-area">
+        <div id="report-index" class="report-index">
+          <div class="loading">Select a date from the sidebar to view reports.</div>
+        </div>
+        <div id="report-detail" class="report-detail" style="display:none"></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div id="modal-overlay" class="modal-overlay" style="display:none">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">Scan Progress</h3>
+      <button id="modal-close" class="btn btn-sm">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <pre id="modal-log" class="modal-log"></pre>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

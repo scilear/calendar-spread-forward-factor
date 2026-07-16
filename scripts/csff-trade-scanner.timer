@@ -1,0 +1,10 @@
+[Unit]
+Description=CSFF intraday trade scanner timer
+
+[Timer]
+OnCalendar=Mon..Fri 21:00:00 Europe/Paris
+Persistent=true
+RandomizedDelaySec=120
+
+[Install]
+WantedBy=timers.target

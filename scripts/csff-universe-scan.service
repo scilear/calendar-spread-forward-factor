@@ -1,0 +1,16 @@
+[Unit]
+Description=CSFF overnight universe scan (after PG refresh)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=portfolio
+Group=portfolio
+WorkingDirectory=/opt/euro_optionstrat/csff
+EnvironmentFile=-/etc/portfoliomonitor/csff.env
+ExecStart=/opt/euro_optionstrat/.venv/bin/python scanner/ff_universe_scan.py \
+    --output-dir /opt/euro_optionstrat/static/csff/reports/universe
+
+[Install]
+WantedBy=multi-user.target
