@@ -59,7 +59,7 @@ class CsffHandler:
         query = parse_qs(parsed.query)
 
         for pattern, handler_name in self.ROUTES:
-            if re.match(pattern, path):
+            if re.match(pattern, parsed.path):
                 handler = getattr(self, f"_handle_{handler_name}", None)
                 if handler:
                     try:
