@@ -49,6 +49,10 @@ def csff_conn(
     conn_kwargs = dict(host=host, port=port, dbname=dbname, user=user)
     if password:
         conn_kwargs["password"] = password
+    # Explicit search_path so unqualified table names (option_chain, ohlcv,
+    # earnings_calendar) resolve to the dolt schema on remote TCP connections.
+    # The default search_path "$user", public does not include dolt.
+    conn_kwargs.setdefault("options", "-c search_path=dolt,public")
     conn_kwargs.update(kwargs)
 
     return psycopg2.connect(**conn_kwargs)
