@@ -1,9 +1,29 @@
 # Calendar Spread Forward Factor (CSFF / T028)
 
+> **Note:** The functional code in this repo (`web/`, `scanner/`, `static/csff/`,
+> the systemd units under `scripts/`) has been merged into the
+> [euro_optionstrat](https://github.com/scilear/euro-optionstrat) repository.
+> This repo remains the historical/research source for the original CSFF
+> scanner and the web integration design.
+
 Forward Factor scanner and trade recommendation engine for S3 calendar
 spread strategies.  Computes the Campasano (2018) Forward Factor from
 option IV term structure to identify inverted vol curves suitable for
 long calendar spreads.
+
+## Where the functional code now lives
+
+After the merge:
+
+| Original CSFF path | New location in euro_optionstrat |
+|---|---|
+| `web/csff_handler.py` | `backend/csff/csff_handler.py` |
+| `web/csff_service.py` | `backend/csff/csff_service.py` |
+| `scanner/` | `scanner/` |
+| `static/csff/` | `static/csff/` |
+| `scripts/csff-*.service` / `*.timer` | `scripts/csff/` |
+
+Deployment is managed by `portfoliomonitor/scripts/deploy/setup_csff.sh`.
 
 ## Structure
 
