@@ -37,7 +37,7 @@ import os
 import re
 import subprocess
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, time
 from pathlib import Path
 
 OPTTRADER_DIR = Path(os.environ.get("OPTTRADER_DIR", str(Path.home() / "Documents" / "OptionTrader")))
@@ -2305,7 +2305,31 @@ def main():
                              f"Fast path — does not let new tickers earn a record.")
     parser.add_argument("--no-stats", action="store_true",
                         help="Do not update ready_stats.json with this run's outcomes")
+    parser.add_argument("--frequent", action="store_true",
+                        help="Frequent-scan mode: exit silently if outside market hours "
+                             "(15:35-21:55 Paris); scan only proven-ready tickers except "
+                             "on :00/:30 marks (full scan every 30 min)")
+    parser.add_argument("--market-hours", nargs=2, metavar=("START", "END"),
+                        default=None,
+                        help="Time window HH:MM-HH:MM (24h, Paris time). "
+                             "Implied by --frequent.")
     args = parser.parse_args()
+
+    if args.frequent:
+        from zoneinfo import ZoneInfo
+        paris_tz = ZoneInfo("Europe/Paris")
+        now = datetime.now(paris_tz)
+        market_start = time(15, 35)
+        market_end   = time(21, 55)
+        if now.time() < market_start or now.time() > market_end:
+            print(f"  [frequent] {now.strftime('%H:%M')} outside market window "
+                  f"{market_start.strftime('%H:%M')}-{market_end.strftime('%H:%M')} Paris — exiting")
+            return 0
+        minute = now.minute
+        if minute % 30 != 0:
+            args.good_only = True
+            print(f"  [frequent] {now.strftime('%H:%M')} good-only scan "
+                  f"(full scan on :00/:30 marks)")
 
     acquire_lock("lock_intraday_scan")
 

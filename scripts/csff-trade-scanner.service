@@ -10,7 +10,8 @@ Group=portfolio
 WorkingDirectory=/opt/euro_optionstrat/csff
 EnvironmentFile=-/etc/portfoliomonitor/csff.env
 ExecStart=/opt/euro_optionstrat/.venv/bin/python scanner/ff_trade_scanner.py \
-    --universe /opt/euro_optionstrat/static/csff/reports/universe/latest_candidates.csv
+    --universe /opt/euro_optionstrat/static/csff/reports/universe/latest_candidates.csv \
+    --frequent
 
 [Install]
 WantedBy=multi-user.target

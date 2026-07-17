@@ -1,10 +1,9 @@
 [Unit]
-Description=CSFF intraday trade scanner timer
+Description=CSFF trade scanner — every 10 min during US market hours (15:35-21:55 Paris)
 
 [Timer]
-OnCalendar=Mon..Fri 21:00:00 Europe/Paris
-Persistent=true
-RandomizedDelaySec=120
+OnCalendar=Mon..Fri *:0/10:00 Europe/Paris
+Persistent=false
 
 [Install]
 WantedBy=timers.target
