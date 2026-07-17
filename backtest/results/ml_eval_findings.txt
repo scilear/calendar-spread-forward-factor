@@ -1,0 +1,85 @@
+======================================================================
+CSFF ML — RIGOROUS OUT-OF-FOLD EVALUATION
+Generated 2026-06-17
+All metrics are out-of-fold (purged walk-forward). No train=test numbers.
+======================================================================
+
+======================================================================
+  STRADDLE CALENDAR  (n=3990 priced trades, return over debit, post-comm)
+======================================================================
+  Unconditional: win 43.7% | EV mean +7.8% | EV median -3.7%  (winsorized [-100,300])
+  Purged walk-forward folds: 4 (embargo 5d, leakage-purged)
+     test from 2024-03-04  (n=510)
+     test from 2024-10-21  (n=1389)
+     test from 2024-12-23  (n=898)
+     test from 2025-02-17  (n=1015)
+
+  TARGET COMPARISON (pooled out-of-fold; metric = top-quintile realized EV)
+  target           OOF AUC   top20% EV             EV 90% CI
+  bin_profit         0.617      +32.1%   [+26.6%, +40.0%]
+  bin_bigwin         0.620      +43.3%   [+36.4%, +51.6%]
+  reg_winsor           —        +31.0%   [+24.0%, +38.0%]
+
+  XGBoost ceiling (honest OOF AUC, bin_profit): 0.651
+  LR OOF AUC (bin_profit): 0.617  90% CI [0.603, 0.632]
+  LR OOF Brier score: 0.2592 (lower better; 0.25 = uninformative)
+
+  MIN-DEBIT SWEEP (the dominant risk lever — independent of ML)
+   min debit   n kept   % kept    win%   EV mean   EV med
+       $0.10     3990     100%   43.7%     +7.8%    -3.7%
+       $0.30     3606      90%   42.7%     +2.5%    -4.3%
+       $0.50     3121      78%   42.2%     -0.3%    -4.5%
+       $0.70     2683      67%   41.3%     -2.8%    -4.6%
+       $1.00     2191      55%   39.9%     -5.2%    -5.2%
+       $1.50     1597      40%   40.8%     -5.2%    -4.2%
+       $2.00     1210      30%   40.2%     -4.7%    -4.3%
+
+  >> Best target by held-out top-quintile EV: bin_bigwin (+43.3%)
+
+======================================================================
+  PUT CALENDAR  (n=3674 priced trades, return over debit, post-comm)
+======================================================================
+  Unconditional: win 35.7% | EV mean -1.3% | EV median -11.5%  (winsorized [-100,300])
+  Purged walk-forward folds: 4 (embargo 5d, leakage-purged)
+     test from 2024-03-11  (n=524)
+     test from 2024-10-28  (n=1221)
+     test from 2024-12-23  (n=845)
+     test from 2025-02-17  (n=913)
+
+  TARGET COMPARISON (pooled out-of-fold; metric = top-quintile realized EV)
+  target           OOF AUC   top20% EV             EV 90% CI
+  bin_profit         0.637      +18.6%   [+13.0%, +24.9%]
+  bin_bigwin         0.637      +35.8%   [+27.8%, +43.0%]
+  reg_winsor           —        +19.9%   [+12.7%, +25.9%]
+
+  XGBoost ceiling (honest OOF AUC, bin_profit): 0.650
+  LR OOF AUC (bin_profit): 0.637  90% CI [0.622, 0.652]
+  LR OOF Brier score: 0.2573 (lower better; 0.25 = uninformative)
+
+  MIN-DEBIT SWEEP (the dominant risk lever — independent of ML)
+   min debit   n kept   % kept    win%   EV mean   EV med
+       $0.10     3674     100%   35.7%     -1.3%   -11.5%
+       $0.30     2776      76%   35.8%     -6.1%    -9.1%
+       $0.50     2117      58%   36.0%     -9.5%    -8.5%
+       $0.70     1668      45%   35.9%     -9.3%    -7.9%
+       $1.00     1192      32%   34.7%    -10.7%    -8.3%
+       $1.50      734      20%   35.1%     -9.0%    -7.0%
+       $2.00      462      13%   35.3%     -7.2%    -5.8%
+
+  >> Best target by held-out top-quintile EV: bin_bigwin (+35.8%)
+
+======================================================================
+FINAL LR COEFFICIENTS FOR ff_trade_scanner.py
+======================================================================
+
+# --- STRADDLE (target=bin_bigwin, 12 trimmed features) ---
+_ML_MED  = {'ff_pct': 57.8049, 'front_dte': 24.5927, 'back_dte': 54.4762, 'front_iv': 0.6717, 'back_iv': 0.4465, 'iv_spread': -0.2252, 'iv_hv_ratio': 2.4620, 'iv_rank_20d': 56.4763, 'trend_strength': 0.3019, 'days_to_earnings': 56.9729, 'debit_pct_spot': 3.6993, 'comm_to_debit_pct': 7.6538}
+_ML_STD  = {'ff_pct': 33.5434, 'front_dte': 5.0765, 'back_dte': 5.5766, 'front_iv': 0.5119, 'back_iv': 0.2717, 'iv_spread': 0.3753, 'iv_hv_ratio': 5.5836, 'iv_rank_20d': 32.8064, 'trend_strength': 0.4344, 'days_to_earnings': 17.3791, 'debit_pct_spot': 2.5313, 'comm_to_debit_pct': 8.7256}
+_ML_COEF = {'ff_pct': 0.0643, 'front_dte': 0.1235, 'back_dte': 0.1629, 'front_iv': 0.1983, 'back_iv': 0.3546, 'iv_spread': -0.0138, 'iv_hv_ratio': -0.6042, 'iv_rank_20d': -0.0181, 'trend_strength': 0.1015, 'days_to_earnings': -0.2236, 'debit_pct_spot': -1.6144, 'comm_to_debit_pct': 0.1699}
+intercept = -0.5596
+
+# --- PUT (target=bin_bigwin, 12 trimmed features) ---
+_ML_MED  = {'ff_pct': 57.4200, 'front_dte': 24.4605, 'back_dte': 54.4132, 'front_iv': 0.6628, 'back_iv': 0.4432, 'iv_spread': -0.2196, 'iv_hv_ratio': 2.3681, 'iv_rank_20d': 56.9892, 'trend_strength': 0.2989, 'days_to_earnings': 56.6257, 'put_debit_pct_spot': 1.9716, 'comm_to_debit_pct_put': 12.9830}
+_ML_STD  = {'ff_pct': 33.6484, 'front_dte': 4.9809, 'back_dte': 5.5015, 'front_iv': 0.4935, 'back_iv': 0.2607, 'iv_spread': 0.3671, 'iv_hv_ratio': 5.0246, 'iv_rank_20d': 32.7823, 'trend_strength': 0.4275, 'days_to_earnings': 17.4848, 'put_debit_pct_spot': 1.5450, 'comm_to_debit_pct_put': 12.0888}
+_ML_COEF = {'ff_pct': -0.0283, 'front_dte': 0.2095, 'back_dte': 0.0476, 'front_iv': 0.2311, 'back_iv': 0.2151, 'iv_spread': -0.1579, 'iv_hv_ratio': -0.2714, 'iv_rank_20d': 0.0009, 'trend_strength': 0.1234, 'days_to_earnings': -0.2254, 'put_debit_pct_spot': -1.7135, 'comm_to_debit_pct_put': 0.0935}
+intercept = -0.5402

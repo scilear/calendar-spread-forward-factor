@@ -1,0 +1,48 @@
+======================================================================
+CSFF ML ANALYSIS — FINDINGS
+Generated 2026-06-17
+======================================================================
+
+DATA
+  Straddle: 3990 priced trades | Win 43.7% | Avg P&L +14.6%
+  Put Cal:  3674 priced trades | Win 35.7% | Avg P&L +7.9%
+
+ML PREDICTABILITY (time-series CV AUC)
+  Straddle: 0.689  | Put Cal: 0.697
+  AUC ~0.50 = no edge | ~0.55+ = some signal | ~0.60+ = meaningful
+
+TOP-30% PREDICTED BUCKET (OOS CV)
+  Straddle: Win 66.0% | Avg P&L +60.4%
+  Put Cal:  Win 57.5% | Avg P&L +41.6%
+
+TOP SHAP FEATURES — STRADDLE (by importance)
+  debit_pct_spot         0.7115
+  back_iv                0.2894
+  iv_hv_ratio            0.1785
+  comm_to_debit_pct      0.1615
+  iv_spread              0.1593
+  ff_pct                 0.1532
+  days_to_earnings       0.1496
+  iv_rank_20d            0.1241
+
+TOP SHAP FEATURES — PUT CALENDAR (by importance)
+  put_debit_pct_spot     0.7751
+  back_iv                0.3164
+  comm_to_debit_pct_put  0.2155
+  iv_spread              0.1515
+  days_to_earnings       0.1459
+  ff_pct                 0.1246
+  iv_hv_ratio            0.1232
+  trend_strength         0.1089
+
+UNIVARIATE CORRELATIONS (Spearman ρ with win, significant p<0.05)
+  debit_pct_spot         ρ=-0.2831 p=0.000 
+  comm_to_debit_pct      ρ=+0.1248 p=0.000 
+  iv_hv_ratio            ρ=-0.1085 p=0.000 
+  front_iv               ρ=-0.0954 p=0.000 
+  ff_pct                 ρ=-0.0910 p=0.000 
+  front_dte              ρ=+0.0805 p=0.000 
+  back_iv                ρ=-0.0706 p=0.000 
+  iv_spread              ρ=+0.0629 p=0.000 *
+
+======================================================================

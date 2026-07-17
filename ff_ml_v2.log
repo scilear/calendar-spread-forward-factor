@@ -1,0 +1,25 @@
+Loaded 121,048 trades with exit return
+Traceback (most recent call last):
+  File "/home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/ff_ml_v2.py", line 409, in <module>
+    main()
+  File "/home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/ff_ml_v2.py", line 331, in main
+    targets  = build_targets(df, tp40)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/ff_ml_v2.py", line 98, in build_targets
+    t = t.join(sim_tp40.set_index("trade_id")["tp40_ret"], on="trade_id")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fabien/Documents/EarningsVolAnalysis/.venv/lib/python3.12/site-packages/pandas/core/frame.py", line 12800, in join
+    return merge(
+           ^^^^^^
+  File "/home/fabien/Documents/EarningsVolAnalysis/.venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 385, in merge
+    op = _MergeOperation(
+         ^^^^^^^^^^^^^^^^
+  File "/home/fabien/Documents/EarningsVolAnalysis/.venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1018, in __init__
+    ) = self._get_merge_keys()
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fabien/Documents/EarningsVolAnalysis/.venv/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1650, in _get_merge_keys
+    left_keys.append(left._get_label_or_level_values(k))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fabien/Documents/EarningsVolAnalysis/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 1776, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'trade_id'

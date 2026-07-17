@@ -1,0 +1,774 @@
+=== scanner run 2026-07-08 21:15 CEST ===
+FF Trade Scanner — 2026-07-08
+FF threshold: 16.0% | Source: IB (yfinance fallback)
+Universe: universe/latest_candidates.csv (FF trend data enabled)
+  Loaded FF series from universe/latest_universe.json
+Candidates from universe CSV: 13 with FF≥16.0%
+Connecting to IB for batch pricing (13 tickers)...
+  IB unavailable — falling back to yfinance per-ticker
+
+Pricing 13 candidate(s) [yfinance per-ticker]
+  SRPT  FF=+65.3% debit=$1.60 → not ready [wide put spread (front $0.55 + back $0.75)]
+  XLC   FF=+33.9% debit=$0.55 → not ready [FF signal gone: live FF -1.3% < 16% (was 33.9% at scan)]
+  SBUX  FF=+26.6% debit=$1.35 → not ready [wide put spread (front $0.55 + back $0.25)]
+  BILL  FF=+38.5% debit=$1.85 → not ready [wide put spread (front $0.50 + back $0.60)]
+  EOG   FF=+46.7% debit=$4.30 → not ready [wide put spread (front $0.80 + back $0.90)]
+  DG    FF=+61.8% debit=$1.00 → not ready [wide put spread (front $0.95 + back $0.45)]
+  KRE   FF=+24.1% debit=$0.51 → not ready [FF signal gone: live FF 3.8% < 16% (was 24.1% at scan)]
+  DLTR  FF=+38.7% debit=$2.65 → not ready [wide put spread (front $1.05 + back $0.95)]
+  BURL  FF=+24.0% debit=$5.80 → not ready [wide put spread (front $1.90 + back $2.20)]
+  CIEN  FF=+16.9% debit=$19.40 → not ready [wide put spread (front $4.00 + back $6.80)]
+  ANF   FF=+19.3% debit=$4.10 → not ready [wide put spread (front $0.80 + back $0.80)]
+  CZR   FF=+16.0% debit=$2.84 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  RCL   FF=+16.2% debit=$2.50 → not ready [wide put spread (front $2.50 + back $1.00)]
+
+Saved: /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/trade_recommendations/2026-07-08_trade_recommendations.csv
+
+Entry-ready candidates: 0 / 13 priced
+
+No entry-ready candidates.
+
+(All candidates priced but failed entry gate:)
+  SRPT  FF=+65.3%: wide spread, low front vol (7), low back vol (18)
+  DG    FF=+61.8%: wide spread, low front vol (2), low back vol (21)
+  EOG   FF=+46.7%: wide spread, low front vol (57), low back vol (27)
+  DLTR  FF=+38.7%: wide spread, low front vol (1), low back vol (41)
+  BILL  FF=+38.5%: wide spread, low front vol (2), low back vol (6)
+  XLC   FF=+33.9%: low front vol (12), low back vol (12)
+  SBUX  FF=+26.6%: wide spread, low front vol (7), low back vol (96)
+  KRE   FF=+24.1%: low front vol (8), low back vol (254)
+  BURL  FF=+24.0%: wide spread, low front vol (5), low back vol (33)
+  ANF   FF=+19.3%: wide spread, low front vol (4), low back vol (17)
+  CIEN  FF=+16.9%: wide spread, low front vol (2), low back vol (132)
+  RCL   FF=+16.2%: wide spread, low front vol (2), low back vol (19)
+  CZR   FF=+16.0%: stale data, wide spread, low front vol (12)
+
+HTML reports → /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-08
+  13 reports (0 entry-ready, 13 priced/not-ready)
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-08/index.html  ← today's summary
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/index.html  ← master dashboard
+=== scanner run 2026-07-09 21:15 CEST ===
+FF Trade Scanner — 2026-07-09
+FF threshold: 16.0% | Source: IB (yfinance fallback)
+Universe: universe/latest_candidates.csv (FF trend data enabled)
+  Loaded FF series from universe/latest_universe.json
+Candidates from universe CSV: 13 with FF≥16.0%
+Connecting to IB for batch pricing (13 tickers)...
+  IB unavailable — falling back to yfinance per-ticker
+
+Pricing 13 candidate(s) [yfinance per-ticker]
+  SRPT  FF=+65.3% debit=$1.55 → not ready [wide put spread (front $1.15 + back $0.60)]
+  XLC   FF=+33.9% debit=$0.65 → not ready [FF signal gone: live FF 2.8% < 16% (was 33.9% at scan)]
+  SBUX  FF=+26.6% debit=$2.55 → READY
+  BILL  FF=+38.5% debit=$1.65 → not ready [wide put spread (front $0.65 + back $1.35)]
+  DLTR  FF=+38.7% debit=$1.80 → not ready [wide put spread (front $1.00 + back $0.45)]
+  DG    FF=+61.8% debit=$0.95 → not ready [wide put spread (front $0.70 + back $0.30)]
+  KRE   FF=+24.1% debit=$0.87 → not ready [FF signal gone: live FF 0.2% < 16% (was 24.1% at scan)]
+  EOG   FF=+46.7% debit=$3.50 → not ready [wide put spread (front $0.60 + back $1.20)]
+  BURL  FF=+24.0% debit=$9.60 → not ready [wide put spread (front $1.30 + back $1.50)]
+  CZR   FF=+16.0% debit=$0.82 → not ready [unquoted legs: front put bid, front call bid — illiquid / market closed]
+  ANF   FF=+19.3% debit=$2.30 → not ready [wide put spread (front $0.70 + back $0.70)]
+  RCL   FF=+16.2% debit=$4.90 → not ready [wide put spread (front $1.20 + back $0.80)]
+  CIEN  FF=+16.9% debit=$15.70 → not ready [wide put spread (front $5.60 + back $2.70)]
+
+Saved: /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/trade_recommendations/2026-07-09_trade_recommendations.csv
+
+Entry-ready candidates: 1 / 13 priced
+
+=== TRADE RECOMMENDATIONS ===
+Ticker      FF%    Strike        Front         Back     Debit      Real   MaxLoss
+  SBUX    +26.6%    108.00   2026-07-31   2026-08-21  $  2.55  $  3.83  $   382
+
+TICKET — SBUX | Strike 108.0 | SELL 2026-07-31 straddle (call+put) | BUY 2026-08-21 straddle (call+put) | Limit $3.83 debit (mid, work up)
+
+HTML reports → /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-09
+  13 reports (1 entry-ready, 12 priced/not-ready)
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-09/index.html  ← today's summary
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/index.html  ← master dashboard
+=== scanner run 2026-07-10 21:15 CEST ===
+FF Trade Scanner — 2026-07-10
+FF threshold: 16.0% | Source: IB (yfinance fallback)
+Universe: universe/latest_candidates.csv (FF trend data enabled)
+  Loaded FF series from universe/latest_universe.json
+Candidates from universe CSV: 13 with FF≥16.0%
+Connecting to IB for batch pricing (13 tickers)...
+  IB unavailable — falling back to yfinance per-ticker
+
+Pricing 13 candidate(s) [yfinance per-ticker]
+  SRPT  FF=+65.3% debit=$2.55 → not ready [wide put spread (front $0.55 + back $0.70)]
+  DG    FF=+61.8% debit=$2.50 → not ready [wide put spread (front $0.75 + back $0.35)]
+  EOG   FF=+46.7% debit=$3.10 → not ready [wide put spread (front $0.80 + back $0.50)]
+  DLTR  FF=+38.7% debit=$2.10 → not ready [FF signal gone: live FF 2.4% < 16% (was 38.7% at scan)]
+  SBUX  FF=+26.6% debit=$2.80 → not ready [wide put spread (front $0.60 + back $0.20)]
+  XLC   FF=+33.9% debit=$1.15 → not ready [FF signal gone: live FF 1.5% < 16% (was 33.9% at scan)]
+  BILL  FF=+38.5% debit=$1.70 → not ready [wide put spread (front $0.35 + back $1.30)]
+  KRE   FF=+24.1% debit=$0.45 → not ready [FF signal gone: live FF 8.6% < 16% (was 24.1% at scan)]
+  CZR   FF=+16.0% debit=$0.70 → not ready [unquoted legs: front put bid, front call bid — illiquid / market closed]
+  BURL  FF=+24.0% debit=$13.55 → not ready [wide put spread (front $2.25 + back $1.70)]
+  ANF   FF=+19.3% debit=$4.10 → not ready [wide put spread (front $0.70 + back $0.50)]
+  RCL   FF=+16.2% debit=$5.00 → not ready [wide put spread (front $1.20 + back $1.30)]
+  CIEN  FF=+16.9% debit=$19.10 → not ready [wide put spread (front $5.10 + back $2.80)]
+
+Saved: /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/trade_recommendations/2026-07-10_trade_recommendations.csv
+
+Entry-ready candidates: 0 / 13 priced
+
+No entry-ready candidates.
+
+(All candidates priced but failed entry gate:)
+  SRPT  FF=+65.3%: wide spread, low front vol (6), low back vol (244)
+  DG    FF=+61.8%: wide spread, low front vol (28), low back vol (22)
+  EOG   FF=+46.7%: wide spread, low front vol (1), low back vol (715)
+  DLTR  FF=+38.7%: low front vol (21), low back vol (69)
+  BILL  FF=+38.5%: wide spread, low front vol (6), low back vol (15)
+  XLC   FF=+33.9%: low front vol (15), low back vol (1)
+  SBUX  FF=+26.6%: wide spread, low front vol (11), low back vol (106)
+  KRE   FF=+24.1%: low front vol (32), low back vol (107)
+  BURL  FF=+24.0%: wide spread, low front vol (4), low back vol (66)
+  ANF   FF=+19.3%: wide spread, low front vol (11), low back vol (51)
+  CIEN  FF=+16.9%: wide spread, low front vol (2), low back vol (11)
+  RCL   FF=+16.2%: wide spread, low front vol (28), low back vol (12)
+  CZR   FF=+16.0%: stale data, wide spread, low front vol (42), low back vol (80)
+
+HTML reports → /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-10
+  13 reports (0 entry-ready, 13 priced/not-ready)
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-10/index.html  ← today's summary
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/index.html  ← master dashboard
+=== scanner run 2026-07-13 21:15 CEST ===
+FF Trade Scanner — 2026-07-13
+FF threshold: 16.0% | Source: IB (yfinance fallback)
+Universe: universe/latest_candidates.csv (FF trend data enabled)
+  Loaded FF series from universe/latest_universe.json
+  Refreshed expiry for 13 candidates (stored expiry was stale)
+Candidates from universe CSV: 13 with FF≥16.0%
+Connecting to IB for batch pricing (13 tickers)...
+  IB batch: 13/13 tickers priced successfully
+
+Pricing 13 candidate(s) [IB batch]
+  XLC   FF=+33.9% debit=$1.65 → not ready [wide put spread (front $0.50 + back $0.55)]
+  EOG   FF=+46.7% debit=$2.70 → not ready [wide put spread (front $0.70 + back $1.50)]
+  RCL   FF=+16.2% debit=$6.40 → not ready [wide put spread (front $2.20 + back $3.80)]
+  SRPT  FF=+65.3% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask, front call bid, back call ask — illiquid / market closed]
+  ANF   FF=+19.3% debit=$5.20 → not ready [wide put spread (front $1.00 + back $2.70)]
+  DLTR  FF=+38.7% debit=$4.50 → not ready [wide put spread (front $0.60 + back $3.80)]
+  CZR   FF=+16.0% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask, front call bid, back call ask — illiquid / market closed]
+  KRE   FF=+24.1% debit=$0.95 → not ready [FF signal gone: live FF 3.0% < 16% (was 24.1% at scan)]
+  SBUX  FF=+26.6% debit=$1.70 → not ready [wide put spread (front $0.65 + back $0.50)]
+  DG    FF=+61.8% debit=$-4.40 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  BILL  FF=+38.5% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask, front call bid, back call ask — illiquid / market closed]
+  BURL  FF=+24.0% debit=$10.70 → not ready [wide put spread (front $2.10 + back $4.40)]
+  CIEN  FF=+16.9% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask, front call bid, back call ask — illiquid / market closed]
+
+Saved: /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/trade_recommendations/2026-07-13_trade_recommendations.csv
+
+Entry-ready candidates: 0 / 13 priced
+
+No entry-ready candidates.
+
+(All candidates priced but failed entry gate:)
+  SRPT  FF=+65.3%: stale data, negative/zero debit (data issue), low front vol (0), low back vol (0)
+  DG    FF=+61.8%: stale data, negative/zero debit (data issue), low front vol (3), low back vol (0)
+  EOG   FF=+46.7%: wide spread, low front vol (9), low back vol (0)
+  DLTR  FF=+38.7%: wide spread, low front vol (1), low back vol (0)
+  BILL  FF=+38.5%: stale data, negative/zero debit (data issue), low front vol (0), low back vol (0)
+  XLC   FF=+33.9%: wide spread, low front vol (0), low back vol (0)
+  SBUX  FF=+26.6%: wide spread, low front vol (9), low back vol (24)
+  KRE   FF=+24.1%: low front vol (2), low back vol (0)
+  BURL  FF=+24.0%: wide spread, low front vol (1), low back vol (0)
+  ANF   FF=+19.3%: wide spread, low front vol (2), low back vol (0)
+  CIEN  FF=+16.9%: stale data, negative/zero debit (data issue), low front vol (0), low back vol (0)
+  RCL   FF=+16.2%: wide spread, low front vol (4), low back vol (1)
+  CZR   FF=+16.0%: stale data, negative/zero debit (data issue), low front vol (0), low back vol (0)
+
+HTML reports → /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-13
+  13 reports (0 entry-ready, 13 priced/not-ready)
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-13/index.html  ← today's summary
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/index.html  ← master dashboard
+FF Trade Scanner — 2026-07-14
+FF threshold: 16.0% | Source: IB (yfinance fallback)
+Universe: universe/latest_candidates.csv (FF trend data enabled)
+  Loaded FF series from universe/latest_universe.json
+Candidates from universe CSV: 144 with FF≥16.0%
+Connecting to IB for batch pricing (144 tickers)...
+  IB unavailable — falling back to yfinance per-ticker
+
+Pricing 144 candidate(s) [yfinance per-ticker]
+  NWN   FF=+70.3% debit=$3.70 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  ZWS   FF=+80.7% debit=$3.45 → not ready [wide put spread (front $2.75 + back $2.85)]
+  IOSP  no data
+  STWD  FF=+29.4% debit=$0.40 → not ready [FF signal gone: live FF -15.0% < 16% (was 29.4% at scan)]
+  BMRN  FF=+95.7% debit=$2.50 → not ready [wide put spread (front $2.40 + back $2.40)]
+  FNF   FF=+53.0% debit=$-0.65 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  BHF   FF=+67.3% debit=$1.70 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  SLAB  FF=+43.0% debit=$6.50 → not ready [unquoted legs: front put bid, front call bid, back call ask — illiquid / market closed]
+  G     FF=+71.5% debit=$2.15 → not ready [wide put spread (front $0.35 + back $2.75)]
+  ASTE  FF=+86.1% debit=$4.70 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  USPH  FF=+80.2% debit=$4.20 → not ready [wide put spread (front $3.20 + back $3.10)]
+  SYY   FF=+45.2% debit=$0.80 → READY
+  KNTK  FF=+50.5% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask — illiquid / market closed]
+  DUK   FF=+33.4% debit=$1.75 → not ready [wide put spread (front $0.55 + back $1.00)]
+  ZBH   FF=+58.6% debit=$2.40 → not ready [wide put spread (front $1.40 + back $3.20)]
+  UTL   FF=+48.9% debit=$4.00 → not ready [wide put spread (front $4.00 + back $4.00)]
+  ECPG  FF=+83.6% debit=$-2.70 → not ready [credit received instead of debit — likely bad quote from IB]
+  ACGL  FF=+26.7% debit=$2.35 → not ready [wide put spread (front $1.80 + back $0.90)]
+  ST    FF=+78.7% debit=$1.75 → not ready [wide put spread (front $1.05 + back $1.30)]
+  ANDE  FF=+55.9% debit=$1.50 → not ready [wide put spread (front $1.10 + back $1.95)]
+  CNK   FF=+65.8% debit=$1.05 → not ready [wide put spread (front $0.55 + back $0.65)]
+  MET   FF=+29.4% debit=$1.30 → not ready [FF signal gone: live FF 6.5% < 16% (was 29.4% at scan)]
+  GOLF  FF=+42.3% debit=$-9.70 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  EA    FF=+84.8% debit=$4.90 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  BCO   FF=+31.4% debit=$3.40 → READY
+  CNH   FF=+69.8% debit=$0.30 → READY
+  LPG   FF=+48.3% debit=$9.65 → not ready [wide put spread (front $2.35 + back $3.10)]
+  AWR   FF=+20.1% debit=$4.50 → not ready [wide put spread (front $0.40 + back $2.45)]
+  MNST  FF=+35.8% debit=$1.10 → not ready [wide put spread (front $0.40 + back $0.60)]
+  GBX   FF=+31.6% debit=$1.15 → not ready [wide put spread (front $0.55 + back $0.65)]
+  MTCH  FF=+41.7% debit=$0.60 → not ready [wide put spread (front $0.70 + back $0.30)]
+  CWEN  FF=+26.4% debit=$-1.75 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  STE   FF=+37.5% debit=$6.90 → not ready [wide put spread (front $2.80 + back $2.80)]
+  PRSU  FF=+37.0% debit=$4.00 → not ready [wide put spread (front $4.00 + back $4.00)]
+  LQDT  no data
+  LRN   FF=+85.0% debit=$2.00 → not ready [wide put spread (front $1.10 + back $1.30)]
+  BALL  FF=+20.0% debit=$0.65 → READY
+  ZTS   FF=+48.1% debit=$0.80 → READY
+  ALG   FF=+38.5% debit=$-8.00 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  HALO  FF=+37.2% debit=$1.85 → not ready [wide put spread (front $2.15 + back $1.60)]
+  AMPH  FF=+72.6% debit=$4.45 → not ready [unquoted legs: front call bid — illiquid / market closed]
+  MSA   no data
+  VNO   FF=+26.1% debit=$-2.85 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  LOPE  FF=+33.3% debit=$4.50 → not ready [wide put spread (front $0.80 + back $0.90)]
+  NTCT  no data
+  ADM   FF=+18.9% debit=$1.20 → READY
+  AIZ   FF=+16.8% debit=$5.70 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  BF.B  no data
+  MCY   FF=+31.0% debit=$-2.95 → not ready [unquoted legs: back put ask, back call ask — illiquid / market closed]
+  LZ    FF=+55.0% debit=$1.35 → READY
+  JEF   FF=+27.2% debit=$1.30 → not ready [wide put spread (front $0.60 + back $0.40)]
+  MSM   FF=+16.1% debit=$0.50 → not ready [wide put spread (front $1.10 + back $1.10)]
+  PIPR  FF=+41.4% debit=$-1.40 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  BDX   FF=+21.1% debit=$2.80 → not ready [wide put spread (front $0.90 + back $1.40)]
+  PAHC  FF=+57.1% debit=$6.55 → not ready [wide put spread (front $3.45 + back $3.40)]
+  COR   FF=+35.5% debit=$4.50 → not ready [wide put spread (front $2.00 + back $2.20)]
+  PEP   FF=+76.2% debit=$0.95 → not ready [wide put spread (front $0.50 + back $0.65)]
+  YETI  FF=+38.2% debit=$-1.95 → not ready [credit received instead of debit — likely bad quote from IB]
+  SBAC  FF=+25.3% debit=$5.00 → not ready [wide put spread (front $3.00 + back $3.40)]
+  PZZA  FF=+62.8% debit=$2.10 → not ready [wide put spread (front $1.00 + back $1.60)]
+  HAE   FF=+44.2% debit=$7.05 → not ready [wide put spread (front $1.15 + back $2.60)]
+  KTB   FF=+38.2% debit=$-2.50 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  PPLI  FF=+17.9% debit=$4.25 → not ready [wide put spread (front $0.65 + back $2.95)]
+  JBTM  FF=+53.8% debit=$-0.95 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  PLNT  FF=+37.2% debit=$1.00 → READY
+  DGII  FF=+38.5% debit=$5.50 → not ready [wide put spread (front $4.50 + back $4.50)]
+  PJT   FF=+20.7% debit=$-1.45 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  MKTX  FF=+31.0% debit=$4.20 → not ready [wide put spread (front $1.90 + back $2.80)]
+  FLR   FF=+45.4% debit=$1.10 → READY
+  GT    FF=+25.4% debit=$0.25 → not ready [FF signal gone: live FF 13.3% < 16% (was 25.4% at scan)]
+  JXN   FF=+23.0% debit=$13.90 → not ready [wide put spread (front $1.50 + back $2.00)]
+  INVX  FF=+19.5% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask — illiquid / market closed]
+  ORA   FF=+23.5% debit=$2.30 → not ready [wide put spread (front $0.90 + back $1.00)]
+  MIDD  FF=+16.4% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask, back call ask — illiquid / market closed]
+  FANG  FF=+18.0% debit=$4.00 → not ready [wide put spread (front $1.70 + back $1.90)]
+  MRK   FF=+79.3% debit=$0.40 → not ready [wide put spread (front $0.25 + back $1.05)]
+  WTS   FF=+17.8% debit=$12.90 → not ready [wide put spread (front $4.30 + back $2.70)]
+  JCI   FF=+16.5% debit=$2.30 → not ready [wide put spread (front $0.80 + back $1.10)]
+  WMS   FF=+24.3% debit=$4.10 → not ready [wide put spread (front $2.00 + back $1.90)]
+  SDGR  FF=+63.3% debit=$0.65 → READY
+  EXTR  FF=+31.4% debit=$0.00 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  LAD   FF=+17.9% debit=$6.30 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  VCYT  FF=+46.3% debit=$0.85 → not ready [wide put spread (front $3.05 + back $3.50)]
+  GEO   FF=+18.1% debit=$0.65 → not ready [FF signal gone: live FF 15.3% < 16% (was 18.1% at scan)]
+  CRUS  FF=+41.3% debit=$-2.60 → not ready [credit received instead of debit — likely bad quote from IB]
+  GPN   FF=+17.6% debit=$1.40 → not ready [wide put spread (front $0.60 + back $0.50)]
+  SGI   FF=+19.1% debit=$1.40 → READY
+  MPC   FF=+24.0% debit=$-10.00 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  CDW   FF=+16.1% debit=$3.30 → not ready [wide put spread (front $1.10 + back $1.50)]
+  PARR  FF=+21.1% debit=$10.40 → not ready [wide put spread (front $1.30 + back $0.90)]
+  SN    FF=+25.1% debit=$3.00 → not ready [wide put spread (front $0.60 + back $1.30)]
+  QLYS  FF=+26.9% debit=$-0.20 → not ready [credit received instead of debit — likely bad quote from IB]
+  MCK   FF=+23.7% debit=$6.90 → not ready [wide put spread (front $4.00 + back $5.50)]
+  ESE   FF=+20.2% debit=$33.70 → not ready [wide put spread (front $4.70 + back $4.50)]
+  SBUX  FF=+77.8% debit=$1.40 → READY
+  ENS   FF=+21.5% debit=$5.30 → not ready [wide put spread (front $2.40 + back $2.60)]
+  PTCT  FF=+18.5% debit=$4.10 → not ready [wide put spread (front $2.60 + back $3.00)]
+  NOVT  FF=+27.7% debit=$5.30 → not ready [wide put spread (front $2.20 + back $3.20)]
+  HCC   FF=+17.3% debit=$2.80 → not ready [wide put spread (front $1.00 + back $1.20)]
+  CCOI  FF=+59.2% debit=$0.50 → READY
+  BRKR  FF=+20.8% debit=$4.45 → not ready [wide put spread (front $1.25 + back $1.00)]
+  IT    FF=+18.5% debit=$3.50 → not ready [wide put spread (front $1.20 + back $1.50)]
+  FIS   no data
+  CACI  FF=+16.0% debit=$12.40 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  IBP   FF=+19.6% debit=$23.90 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  CMI   FF=+24.2% debit=$12.00 → not ready [wide put spread (front $3.10 + back $3.30)]
+  PRIM  FF=+32.9% debit=$2.20 → not ready [wide put spread (front $0.40 + back $0.80)]
+  DIOD  FF=+28.6% debit=$4.10 → not ready [wide put spread (front $1.50 + back $2.50)]
+  XLY   FF=+32.5% debit=$-1.65 → not ready [credit received instead of debit — likely bad quote from IB]
+  XRT   no data
+  AKAM  FF=+99.3% debit=$-4.30 → not ready [credit received instead of debit — likely bad quote from IB]
+  VIAV  FF=+28.1% debit=$1.70 → not ready [FF signal gone: live FF 11.1% < 16% (was 28.1% at scan)]
+  CC    FF=+67.7% debit=$0.50 → READY
+  TXRH  FF=+33.6% debit=$2.00 → not ready [wide put spread (front $1.00 + back $1.20)]
+  UBER  FF=+34.3% debit=$0.85 → not ready [wide put spread (front $0.25 + back $0.85)]
+  STZ   FF=+20.2% debit=$-2.25 → not ready [credit received instead of debit — likely bad quote from IB]
+  COP   FF=+21.7% debit=$2.85 → not ready [wide put spread (front $0.85 + back $4.25)]
+  DIS   FF=+21.0% debit=$0.85 → not ready [wide put spread (front $0.80 + back $0.85)]
+  LSCC  FF=+19.6% debit=$5.40 → not ready [wide put spread (front $1.30 + back $2.00)]
+  AEIS  FF=+18.0% debit=$4.90 → not ready [wide put spread (front $3.50 + back $3.60)]
+  APA   FF=+18.2% debit=$-1.07 → not ready [FF signal gone: live FF 12.2% < 16% (was 18.2% at scan)]
+  MOS   FF=+17.0% debit=$0.10 → not ready [FF signal gone: live FF 7.1% < 16% (was 17.0% at scan)]
+  PINS  FF=+31.9% debit=$-0.48 → not ready [credit received instead of debit — likely bad quote from IB]
+  VRTX  no data
+  CELH  FF=+40.1% debit=$0.48 → not ready [wide put spread (front $0.43 + back $0.51)]
+  DUOL  FF=+65.8% debit=$2.70 → not ready [wide put spread (front $2.40 + back $2.90)]
+  CEG   FF=+31.2% debit=$6.00 → not ready [wide put spread (front $0.90 + back $2.70)]
+  DASH  FF=+31.2% debit=$3.15 → not ready [wide put spread (front $2.20 + back $0.75)]
+  BROS  FF=+19.1% debit=$-1.45 → not ready [credit received instead of debit — likely bad quote from IB]
+  PLTR  FF=+23.7% debit=$1.85 → not ready [wide put spread (front $0.60 + back $1.10)]
+  STRL  FF=+18.2% debit=$29.40 → not ready [wide put spread (front $10.70 + back $11.80)]
+  MP    FF=+20.4% debit=$1.70 → not ready [wide put spread (front $0.95 + back $1.00)]
+  RNG   no data
+  ELF   FF=+26.2% debit=$0.45 → not ready [wide put spread (front $0.90 + back $1.65)]
+  ANET  FF=+26.5% debit=$3.60 → not ready [wide put spread (front $1.70 + back $2.55)]
+  CAT   FF=+26.7% debit=$19.40 → not ready [wide put spread (front $1.90 + back $7.40)]
+  WRBY  FF=+17.8% debit=$2.20 → not ready [FF signal gone: live FF 10.7% < 16% (was 17.8% at scan)]
+  AXON  FF=+33.7% debit=$-0.30 → not ready [credit received instead of debit — likely bad quote from IB]
+  DAVE  no data
+  ON    FF=+25.9% debit=$0.10 → not ready [wide put spread (front $1.40 + back $1.45)]
+  DOCN  FF=+16.2% debit=$1.70 → not ready [wide put spread (front $2.20 + back $2.70)]
+  APP   FF=+23.4% debit=$5.70 → not ready [wide put spread (front $4.50 + back $3.10)]
+  TER   FF=+21.1% debit=$12.10 → not ready [wide put spread (front $2.80 + back $3.40)]
+  SNDK  FF=+17.1% debit=$74.90 → not ready [wide put spread (front $11.30 + back $15.60)]
+
+Saved: /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/trade_recommendations/2026-07-14_trade_recommendations.csv
+
+Entry-ready candidates: 14 / 134 priced
+
+=== TRADE RECOMMENDATIONS ===
+Ticker      FF%    Strike        Front         Back     Debit      Real   MaxLoss
+  SBUX    +77.8%    108.00   2026-08-07   2026-08-28  $  1.40  $  2.10  $   210
+  CNH     +69.8%     10.00   2026-08-21   2026-09-18  $  0.30  $  0.45  $    45
+  CC      +67.7%     19.00   2026-08-07   2026-08-28  $  0.50  $  0.75  $    75
+  SDGR    +63.3%     17.50   2026-08-21   2026-09-18  $  0.65  $  0.97  $    98
+  CCOI    +59.2%     12.50   2026-08-21   2026-09-18  $  0.50  $  0.75  $    75
+  LZ      +55.0%      8.00   2026-08-21   2026-09-18  $  1.35  $  2.02  $   202
+  ZTS     +48.1%     75.00   2026-08-21   2026-09-18  $  0.80  $  1.20  $   120
+  FLR     +45.4%     52.50   2026-08-21   2026-09-18  $  1.10  $  1.65  $   165
+  SYY     +45.2%     82.50   2026-08-21   2026-09-18  $  0.80  $  1.20  $   120
+  PLNT    +37.2%     52.50   2026-08-21   2026-09-18  $  1.00  $  1.50  $   150
+  BCO     +31.4%    110.00   2026-08-21   2026-09-18  $  3.40  $  5.10  $   510
+  BALL    +20.0%     60.00   2026-08-21   2026-09-18  $  0.65  $  0.97  $    98
+  SGI     +19.1%     75.00   2026-08-21   2026-09-18  $  1.40  $  2.10  $   210
+  ADM     +18.9%     82.50   2026-08-21   2026-09-18  $  1.20  $  1.80  $   180
+
+TICKET — SBUX | Strike 108.0 | SELL 2026-08-07 straddle (call+put) | BUY 2026-08-28 straddle (call+put) | Limit $2.10 debit (mid, work up)
+TICKET — CNH | Strike 10.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.45 debit (mid, work up)
+TICKET — CC | Strike 19.0 | SELL 2026-08-07 straddle (call+put) | BUY 2026-08-28 straddle (call+put) | Limit $0.75 debit (mid, work up)
+TICKET — SDGR | Strike 17.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.97 debit (mid, work up)
+TICKET — CCOI | Strike 12.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.75 debit (mid, work up)
+TICKET — LZ | Strike 8.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $2.02 debit (mid, work up)
+TICKET — ZTS | Strike 75.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.20 debit (mid, work up)
+TICKET — FLR | Strike 52.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.65 debit (mid, work up)
+TICKET — SYY | Strike 82.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.20 debit (mid, work up)
+TICKET — PLNT | Strike 52.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.50 debit (mid, work up)
+TICKET — BCO | Strike 110.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $5.10 debit (mid, work up)
+TICKET — BALL | Strike 60.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.97 debit (mid, work up)
+TICKET — SGI | Strike 75.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $2.10 debit (mid, work up)
+TICKET — ADM | Strike 82.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.80 debit (mid, work up)
+
+HTML reports → /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-14
+  134 reports (14 entry-ready, 120 priced/not-ready)
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-14/index.html  ← today's summary
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/index.html  ← master dashboard
+FF Trade Scanner — 2026-07-15
+FF threshold: 16.0% | Source: IB (yfinance fallback)
+Universe: universe/latest_candidates.csv (FF trend data enabled)
+  Loaded FF series from universe/latest_universe.json
+Candidates from universe CSV: 144 with FF≥16.0%
+Connecting to IB for batch pricing (144 tickers)...
+  IB unavailable — falling back to yfinance per-ticker
+
+Pricing 144 candidate(s) [yfinance per-ticker]
+  ZWS   FF=+80.7% debit=$3.30 → not ready [wide put spread (front $2.90 + back $2.40)]
+  BHF   FF=+67.3% debit=$2.30 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  STWD  FF=+29.4% debit=$0.30 → not ready [FF signal gone: live FF -17.9% < 16% (was 29.4% at scan)]
+  IOSP  no data
+  BMRN  FF=+95.7% debit=$3.50 → not ready [wide put spread (front $1.90 + back $2.30)]
+  SLAB  FF=+43.0% debit=$6.50 → not ready [unquoted legs: front put bid, front call bid, back call ask — illiquid / market closed]
+  NWN   FF=+70.3% debit=$3.90 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  EA    FF=+84.8% debit=$3.90 → not ready [wide put spread (front $3.90 + back $4.90)]
+  DUK   FF=+33.4% debit=$1.30 → not ready [wide put spread (front $0.50 + back $0.80)]
+  FNF   FF=+53.0% debit=$-0.55 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  UTL   FF=+48.9% debit=$4.10 → not ready [wide put spread (front $4.10 + back $3.70)]
+  SYY   FF=+45.2% debit=$0.80 → READY
+  ZBH   FF=+58.6% debit=$2.35 → not ready [wide put spread (front $2.65 + back $0.90)]
+  KNTK  FF=+50.5% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask — illiquid / market closed]
+  G     FF=+71.5% debit=$1.50 → not ready [wide put spread (front $0.40 + back $2.15)]
+  USPH  FF=+80.2% debit=$10.90 → not ready [wide put spread (front $3.30 + back $3.60)]
+  ASTE  FF=+86.1% debit=$4.60 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  ECPG  FF=+83.6% debit=$-3.80 → not ready [credit received instead of debit — likely bad quote from IB]
+  ST    FF=+78.7% debit=$1.50 → not ready [wide put spread (front $0.80 + back $1.00)]
+  ANDE  FF=+55.9% debit=$1.15 → not ready [wide put spread (front $0.90 + back $0.70)]
+  ACGL  FF=+26.7% debit=$1.00 → READY
+  MET   FF=+29.4% debit=$1.10 → not ready [FF signal gone: live FF 12.4% < 16% (was 29.4% at scan)]
+  CNK   FF=+65.8% debit=$0.80 → not ready [wide put spread (front $0.20 + back $0.70)]
+  GOLF  FF=+42.3% debit=$-5.80 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  AWR   FF=+20.1% debit=$2.80 → not ready [wide put spread (front $0.40 + back $0.85)]
+  CNH   FF=+69.8% debit=$0.30 → not ready [FF signal gone: live FF 6.3% < 16% (was 69.8% at scan)]
+  LPG   FF=+48.3% debit=$5.25 → not ready [wide put spread (front $2.95 + back $2.10)]
+  GBX   FF=+31.6% debit=$0.90 → not ready [FF signal gone: live FF 1.0% < 16% (was 31.6% at scan)]
+  BCO   FF=+31.4% debit=$13.70 → not ready [wide put spread (front $0.35 + back $0.70)]
+  MNST  FF=+35.8% debit=$1.10 → READY
+  MTCH  FF=+41.7% debit=$0.70 → READY
+  PEP   FF=+76.2% debit=$0.60 → not ready [wide put spread (front $0.60 + back $0.50)]
+  PRSU  FF=+37.0% debit=$4.00 → not ready [wide put spread (front $4.00 + back $4.00)]
+  STE   FF=+37.5% debit=$7.70 → not ready [wide put spread (front $2.10 + back $2.80)]
+  LQDT  no data
+  CWEN  FF=+26.4% debit=$-1.55 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  BALL  FF=+20.0% debit=$1.30 → not ready [wide put spread (front $0.60 + back $0.90)]
+  LRN   FF=+85.0% debit=$1.50 → not ready [wide put spread (front $0.80 + back $1.10)]
+  ZTS   FF=+48.1% debit=$0.90 → not ready [wide put spread (front $0.60 + back $0.50)]
+  MRK   FF=+79.3% debit=$1.75 → not ready [wide put spread (front $0.50 + back $0.90)]
+  ALG   FF=+38.5% debit=$-7.80 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  HALO  FF=+37.2% debit=$3.65 → not ready [wide put spread (front $1.45 + back $3.10)]
+  MSA   no data
+  VNO   FF=+26.1% debit=$-2.15 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  AMPH  FF=+72.6% debit=$4.10 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  LOPE  FF=+33.3% debit=$5.00 → not ready [wide put spread (front $0.80 + back $0.80)]
+  NTCT  no data
+  ADM   FF=+18.9% debit=$1.10 → READY
+  BF.B  no data
+  AIZ   FF=+16.8% debit=$4.00 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  MCY   FF=+31.0% debit=$-4.00 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  JEF   FF=+27.2% debit=$1.20 → not ready [FF signal gone: live FF 1.2% < 16% (was 27.2% at scan)]
+  LZ    FF=+55.0% debit=$1.20 → READY
+  MSM   FF=+16.1% debit=$1.30 → not ready [wide put spread (front $1.90 + back $2.10)]
+  PIPR  FF=+41.4% debit=$8.65 → not ready [wide put spread (front $3.05 + back $2.40)]
+  BDX   FF=+21.1% debit=$2.70 → not ready [wide put spread (front $0.90 + back $0.90)]
+  PAHC  FF=+57.1% debit=$6.60 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  COR   FF=+35.5% debit=$4.60 → not ready [wide put spread (front $2.20 + back $2.40)]
+  SBAC  FF=+25.3% debit=$5.20 → not ready [wide put spread (front $2.20 + back $4.10)]
+  YETI  FF=+38.2% debit=$-2.30 → not ready [credit received instead of debit — likely bad quote from IB]
+  SBUX  FF=+77.8% debit=$1.30 → not ready [wide put spread (front $0.35 + back $0.90)]
+  HAE   FF=+44.2% debit=$19.40 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  PZZA  FF=+62.8% debit=$1.80 → not ready [wide put spread (front $0.95 + back $2.30)]
+  KTB   FF=+38.2% debit=$-2.30 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  PPLI  FF=+17.9% debit=$5.20 → not ready [wide put spread (front $3.20 + back $2.95)]
+  JBTM  FF=+53.8% debit=$-0.90 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  PLNT  FF=+37.2% debit=$1.20 → READY
+  PJT   FF=+20.7% debit=$-0.50 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  DGII  FF=+38.5% debit=$5.50 → not ready [wide put spread (front $3.70 + back $4.50)]
+  MKTX  FF=+31.0% debit=$3.40 → not ready [wide put spread (front $2.80 + back $1.40)]
+  GT    FF=+25.4% debit=$0.25 → READY
+  FLR   FF=+45.4% debit=$1.30 → not ready [wide put spread (front $0.50 + back $0.60)]
+  JXN   FF=+23.0% debit=$11.50 → not ready [wide put spread (front $1.70 + back $2.00)]
+  ORA   FF=+23.5% debit=$2.00 → not ready [wide put spread (front $0.70 + back $0.70)]
+  MIDD  FF=+16.4% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask, back call ask — illiquid / market closed]
+  FANG  FF=+18.0% debit=$3.80 → not ready [wide put spread (front $1.70 + back $1.60)]
+  INVX  FF=+19.5% debit=$-0.30 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  WTS   FF=+17.8% debit=$12.00 → not ready [wide put spread (front $3.50 + back $4.60)]
+  JCI   FF=+16.5% debit=$2.40 → not ready [wide put spread (front $0.90 + back $0.80)]
+  FIS   no data
+  WMS   FF=+24.3% debit=$3.40 → not ready [wide put spread (front $1.20 + back $2.00)]
+  SGI   FF=+19.1% debit=$1.70 → not ready [wide put spread (front $0.70 + back $0.70)]
+  CRUS  FF=+41.3% debit=$-3.00 → not ready [credit received instead of debit — likely bad quote from IB]
+  EXTR  FF=+31.4% debit=$1.60 → not ready [wide put spread (front $0.80 + back $1.30)]
+  GPN   FF=+17.6% debit=$1.60 → not ready [wide put spread (front $0.60 + back $0.60)]
+  VCYT  FF=+46.3% debit=$-0.25 → not ready [credit received instead of debit — likely bad quote from IB]
+  LAD   FF=+17.9% debit=$6.30 → not ready [wide put spread (front $3.20 + back $3.30)]
+  SDGR  FF=+63.3% debit=$0.90 → not ready [wide put spread (front $0.55 + back $1.45)]
+  GEO   FF=+18.1% debit=$0.70 → not ready [FF signal gone: live FF 13.4% < 16% (was 18.1% at scan)]
+  CDW   FF=+16.1% debit=$2.90 → not ready [wide put spread (front $0.90 + back $1.20)]
+  MPC   FF=+24.0% debit=$9.60 → not ready [wide put spread (front $0.70 + back $0.80)]
+  ESE   FF=+20.2% debit=$32.50 → not ready [wide put spread (front $3.00 + back $4.50)]
+  XLY   FF=+32.5% debit=$-0.05 → not ready [credit received instead of debit — likely bad quote from IB]
+  PARR  FF=+21.1% debit=$10.50 → not ready [wide put spread (front $1.40 + back $0.90)]
+  SN    FF=+25.1% debit=$0.50 → not ready [wide put spread (front $0.90 + back $1.20)]
+  QLYS  FF=+26.9% debit=$3.30 → not ready [wide put spread (front $3.80 + back $3.80)]
+  XRT   no data
+  ENS   FF=+21.5% debit=$5.40 → not ready [wide put spread (front $2.40 + back $2.70)]
+  MCK   FF=+23.7% debit=$8.80 → not ready [wide put spread (front $5.30 + back $6.20)]
+  HCC   FF=+17.3% debit=$2.40 → not ready [wide put spread (front $1.00 + back $1.00)]
+  NOVT  FF=+27.7% debit=$5.00 → not ready [wide put spread (front $2.70 + back $2.80)]
+  PTCT  FF=+18.5% debit=$3.40 → not ready [wide put spread (front $1.50 + back $2.40)]
+  BRKR  FF=+20.8% debit=$4.80 → not ready [wide put spread (front $0.80 + back $1.70)]
+  CCOI  FF=+59.2% debit=$0.55 → not ready [FF signal gone: live FF 3.1% < 16% (was 59.2% at scan)]
+  IT    FF=+18.5% debit=$3.70 → not ready [wide put spread (front $1.40 + back $1.90)]
+  CACI  FF=+16.0% debit=$12.10 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  AKAM  FF=+99.3% debit=$-3.40 → not ready [credit received instead of debit — likely bad quote from IB]
+  CC    FF=+67.7% debit=$0.50 → READY
+  IBP   FF=+19.6% debit=$25.40 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  PRIM  FF=+32.9% debit=$2.70 → not ready [wide put spread (front $0.90 + back $1.10)]
+  TXRH  FF=+33.6% debit=$1.70 → not ready [wide put spread (front $0.65 + back $0.90)]
+  CMI   FF=+24.2% debit=$11.00 → not ready [wide put spread (front $2.10 + back $2.50)]
+  UBER  FF=+34.3% debit=$0.95 → not ready [wide put spread (front $0.30 + back $0.90)]
+  COP   FF=+21.7% debit=$1.10 → not ready [wide put spread (front $0.35 + back $1.00)]
+  DIS   FF=+21.0% debit=$0.35 → not ready [wide put spread (front $0.45 + back $0.90)]
+  DIOD  FF=+28.6% debit=$3.40 → not ready [wide put spread (front $1.00 + back $1.30)]
+  VIAV  FF=+28.1% debit=$1.70 → not ready [wide put spread (front $0.80 + back $0.30)]
+  STZ   FF=+20.2% debit=$-0.70 → not ready [credit received instead of debit — likely bad quote from IB]
+  APA   FF=+18.2% debit=$-1.03 → not ready [FF signal gone: live FF 13.6% < 16% (was 18.2% at scan)]
+  MOS   FF=+17.0% debit=$0.20 → not ready [FF signal gone: live FF -5.1% < 16% (was 17.0% at scan)]
+  LSCC  FF=+19.6% debit=$5.60 → not ready [wide put spread (front $1.70 + back $2.60)]
+  AEIS  FF=+18.0% debit=$10.10 → not ready [wide put spread (front $2.90 + back $2.80)]
+  PINS  FF=+31.9% debit=$-0.78 → not ready [credit received instead of debit — likely bad quote from IB]
+  CELH  FF=+40.1% debit=$0.49 → not ready [FF signal gone: live FF 12.7% < 16% (was 40.1% at scan)]
+  CEG   FF=+31.2% debit=$6.60 → not ready [wide put spread (front $0.50 + back $3.10)]
+  VRTX  no data
+  DUOL  FF=+65.8% debit=$0.90 → not ready [wide put spread (front $1.20 + back $1.20)]
+  DASH  FF=+31.2% debit=$3.75 → not ready [wide put spread (front $1.45 + back $0.70)]
+  BROS  FF=+19.1% debit=$-1.45 → not ready [credit received instead of debit — likely bad quote from IB]
+  MP    FF=+20.4% debit=$2.05 → not ready [wide put spread (front $0.60 + back $0.90)]
+  PLTR  FF=+23.7% debit=$2.45 → not ready [wide put spread (front $0.35 + back $1.00)]
+  RNG   no data
+  ELF   FF=+26.2% debit=$-0.65 → not ready [credit received instead of debit — likely bad quote from IB]
+  ANET  FF=+26.5% debit=$5.90 → not ready [wide put spread (front $2.05 + back $2.40)]
+  CAT   FF=+26.7% debit=$20.75 → not ready [wide put spread (front $6.05 + back $6.60)]
+  STRL  FF=+18.2% debit=$29.20 → not ready [wide put spread (front $8.50 + back $11.80)]
+  WRBY  FF=+17.8% debit=$1.55 → not ready [FF signal gone: live FF 12.8% < 16% (was 17.8% at scan)]
+  ON    FF=+25.9% debit=$2.05 → not ready [wide put spread (front $1.00 + back $2.55)]
+  DAVE  no data
+  AXON  FF=+33.7% debit=$11.00 → not ready [wide put spread (front $7.00 + back $7.00)]
+  APP   FF=+23.4% debit=$3.50 → not ready [wide put spread (front $3.30 + back $2.70)]
+  DOCN  FF=+16.2% debit=$5.20 → not ready [wide put spread (front $1.40 + back $1.90)]
+  TER   FF=+21.1% debit=$5.50 → not ready [wide put spread (front $2.00 + back $3.40)]
+  SNDK  FF=+17.1% debit=$72.90 → not ready [wide put spread (front $13.60 + back $16.40)]
+
+Saved: /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/trade_recommendations/2026-07-15_trade_recommendations.csv
+
+Entry-ready candidates: 9 / 134 priced
+
+=== TRADE RECOMMENDATIONS ===
+Ticker      FF%    Strike        Front         Back     Debit      Real   MaxLoss
+  CC      +67.7%     19.00   2026-08-07   2026-08-28  $  0.50  $  0.75  $    75
+  LZ      +55.0%      8.00   2026-08-21   2026-09-18  $  1.20  $  1.80  $   180
+  SYY     +45.2%     82.50   2026-08-21   2026-09-18  $  0.80  $  1.20  $   120
+  MTCH    +41.7%     40.00   2026-08-21   2026-09-18  $  0.70  $  1.05  $   105
+  PLNT    +37.2%     52.50   2026-08-21   2026-09-18  $  1.20  $  1.80  $   180
+  MNST    +35.8%    100.00   2026-08-21   2026-09-18  $  1.10  $  1.65  $   165
+  ACGL    +26.7%    100.00   2026-08-21   2026-09-18  $  1.00  $  1.50  $   150
+  GT      +25.4%      7.00   2026-08-21   2026-09-18  $  0.25  $  0.38  $    38
+  ADM     +18.9%     82.50   2026-08-21   2026-09-18  $  1.10  $  1.65  $   165
+
+TICKET — CC | Strike 19.0 | SELL 2026-08-07 straddle (call+put) | BUY 2026-08-28 straddle (call+put) | Limit $0.75 debit (mid, work up)
+TICKET — LZ | Strike 8.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.80 debit (mid, work up)
+TICKET — SYY | Strike 82.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.20 debit (mid, work up)
+TICKET — MTCH | Strike 40.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.05 debit (mid, work up)
+TICKET — PLNT | Strike 52.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.80 debit (mid, work up)
+TICKET — MNST | Strike 100.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.65 debit (mid, work up)
+TICKET — ACGL | Strike 100.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.50 debit (mid, work up)
+TICKET — GT | Strike 7.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.38 debit (mid, work up)
+TICKET — ADM | Strike 82.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.65 debit (mid, work up)
+
+HTML reports → /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-15
+  134 reports (9 entry-ready, 125 priced/not-ready)
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-15/index.html  ← today's summary
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/index.html  ← master dashboard
+FF Trade Scanner — 2026-07-16
+FF threshold: 16.0% | Source: IB (yfinance fallback)
+Universe: universe/latest_candidates.csv (FF trend data enabled)
+  Loaded FF series from universe/latest_universe.json
+Candidates from universe CSV: 146 with FF≥16.0%
+  Priority: 6 proven-ready ticker(s) first — PINS, LZ, HTZ, CSR, TTD
+Connecting to IB for batch pricing (146 tickers)...
+  IB unavailable — falling back to yfinance per-ticker
+
+Pricing 146 candidate(s) [yfinance per-ticker]
+  NTCT  no data
+  MSA   no data
+  LMAT  no data
+  LZ    FF=+25.1% debit=$1.10 → READY
+  CSR   no data
+  PINS  FF=+37.2% debit=$0.85 → READY
+  HTZ   FF=+16.8% debit=$0.13 → READY
+  TTD   FF=+56.0% debit=$0.58 → READY
+  ALRM  no data
+  MNST  FF=+24.3% debit=$1.20 → READY
+  ZTS   FF=+56.6% debit=$1.20 → READY
+  MTCH  FF=+42.4% debit=$0.55 → READY
+  CCOI  FF=+40.5% debit=$0.55 → READY
+  SMCI  FF=+16.0% debit=$1.10 → READY
+  OXY   FF=+17.4% debit=$1.55 → not ready [FF signal gone: live FF 13.7% < 16% (was 17.4% at scan)]
+  ABNB  FF=+39.9% debit=$2.75 → READY
+  GEO   FF=+21.4% debit=$0.65 → not ready [FF signal gone: live FF 10.5% < 16% (was 21.4% at scan)]
+  MATW  FF=+37.1% debit=$-1.70 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  CC    FF=+26.5% debit=$1.45 → READY
+  CELH  FF=+36.6% debit=$0.57 → READY
+  WRBY  FF=+20.9% debit=$3.00 → not ready [wide put spread (front $0.60 + back $0.20)]
+  MDLZ  FF=+20.2% debit=$0.85 → not ready [FF signal gone: live FF 12.9% < 16% (was 20.2% at scan)]
+  LOPE  FF=+37.1% debit=$1.70 → not ready [wide put spread (front $0.40 + back $0.60)]
+  MCHP  FF=+18.4% debit=$3.60 → not ready [wide put spread (front $0.50 + back $0.60)]
+  TSN   FF=+49.3% debit=$0.85 → READY
+  EVRG  FF=+33.9% debit=$3.65 → not ready [wide put spread (front $2.15 + back $3.05)]
+  DDOG  FF=+38.1% debit=$7.35 → not ready [wide put spread (front $1.05 + back $1.30)]
+  XOM   FF=+37.5% debit=$1.95 → not ready [wide put spread (front $0.95 + back $0.15)]
+  DUOL  FF=+48.3% debit=$7.40 → not ready [wide put spread (front $0.90 + back $2.00)]
+  KFY   FF=+32.9% debit=$0.00 → not ready [unquoted legs: front put bid, back put ask — illiquid / market closed]
+  ELF   FF=+33.5% debit=$3.55 → not ready [wide put spread (front $1.00 + back $0.90)]
+  DASH  FF=+33.0% debit=$5.05 → not ready [wide put spread (front $0.85 + back $1.15)]
+  DAVE  FF=+33.0% debit=$30.20 → not ready [wide put spread (front $6.10 + back $6.30)]
+  SBAC  FF=+30.8% debit=$4.70 → not ready [wide put spread (front $2.90 + back $2.60)]
+  SGI   FF=+28.7% debit=$1.20 → READY
+  ESE   FF=+28.6% debit=$29.50 → not ready [wide put spread (front $4.00 + back $4.50)]
+  OKE   FF=+25.3% debit=$1.20 → not ready [FF signal gone: live FF 9.4% < 16% (was 25.3% at scan)]
+  UPS   FF=+32.8% debit=$4.20 → not ready [wide put spread (front $1.60 + back $0.30)]
+  ONTO  FF=+16.2% debit=$10.20 → not ready [wide put spread (front $0.90 + back $1.30)]
+  SEDG  FF=+25.1% debit=$3.45 → not ready [wide put spread (front $1.50 + back $0.90)]
+  XLC   FF=+16.2% debit=$-1.85 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  KBE   FF=+96.1% debit=$9.50 → not ready [wide put spread (front $1.10 + back $4.50)]
+  OUT   FF=+94.3% debit=$2.75 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  ZWS   FF=+88.4% debit=$3.15 → not ready [wide put spread (front $0.65 + back $4.00)]
+  HAE   FF=+85.8% debit=$19.35 → not ready [wide put spread (front $2.85 + back $2.40)]
+  GMED  FF=+81.5% debit=$1.10 → not ready [wide put spread (front $0.40 + back $0.90)]
+  STAA  FF=+76.2% debit=$2.60 → not ready [wide put spread (front $2.30 + back $2.00)]
+  EA    FF=+83.2% debit=$4.90 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  PRKS  FF=+75.5% debit=$1.65 → not ready [wide put spread (front $1.10 + back $0.65)]
+  BHF   FF=+74.4% debit=$2.30 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  DGII  FF=+69.0% debit=$4.40 → not ready [wide put spread (front $4.50 + back $2.10)]
+  TRIP  FF=+69.1% debit=$0.60 → READY
+  ACHC  FF=+67.6% debit=$1.00 → not ready [wide put spread (front $1.30 + back $0.60)]
+  SBUX  FF=+68.8% debit=$2.65 → not ready [wide put spread (front $0.55 + back $0.20)]
+  LRN   FF=+66.1% debit=$1.90 → not ready [wide put spread (front $1.00 + back $1.40)]
+  ECPG  FF=+67.2% debit=$-0.80 → not ready [credit received instead of debit — likely bad quote from IB]
+  MCY   FF=+59.0% debit=$-5.50 → not ready [unquoted legs: back put ask, back call ask — illiquid / market closed]
+  JBLU  FF=+61.4% debit=$0.02 → not ready [FF signal gone: live FF 1.7% < 16% (was 61.4% at scan)]
+  SWKS  FF=+52.8% debit=$1.80 → not ready [FF signal gone: live FF 12.3% < 16% (was 52.8% at scan)]
+  CART  FF=+58.1% debit=$0.80 → not ready [wide put spread (front $0.60 + back $0.60)]
+  FRPT  FF=+51.2% debit=$2.00 → not ready [unquoted legs: front call bid — illiquid / market closed]
+  GPK   FF=+49.5% debit=$1.40 → not ready [wide put spread (front $1.90 + back $1.15)]
+  AKAM  FF=+55.1% debit=$4.60 → not ready [wide put spread (front $2.50 + back $0.50)]
+  BMRN  FF=+48.3% debit=$3.10 → not ready [wide put spread (front $2.50 + back $3.35)]
+  TWLO  FF=+49.7% debit=$3.10 → not ready [wide put spread (front $1.50 + back $0.60)]
+  UNM   FF=+45.4% debit=$1.10 → not ready [FF signal gone: live FF 15.7% < 16% (was 45.4% at scan)]
+  SDGR  FF=+42.7% debit=$0.55 → not ready [wide put spread (front $0.55 + back $0.30)]
+  PIPR  FF=+43.0% debit=$9.90 → not ready [wide put spread (front $3.60 + back $4.20)]
+  TXRH  FF=+46.9% debit=$-1.85 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  SONO  FF=+41.9% debit=$0.65 → not ready [FF signal gone: live FF 12.5% < 16% (was 41.9% at scan)]
+  AFG   FF=+40.9% debit=$-1.05 → not ready [unquoted legs: back put ask, back call ask — illiquid / market closed]
+  SLAB  FF=+40.6% debit=$6.50 → not ready [unquoted legs: front put bid, front call bid, back call ask — illiquid / market closed]
+  UBER  FF=+42.7% debit=$1.95 → READY
+  SN    FF=+40.4% debit=$0.50 → not ready [wide put spread (front $0.80 + back $0.70)]
+  COR   FF=+38.3% debit=$3.80 → not ready [wide put spread (front $1.70 + back $1.70)]
+  ZBH   FF=+38.1% debit=$1.40 → not ready [wide put spread (front $2.10 + back $0.90)]
+  CRUS  FF=+36.1% debit=$4.00 → not ready [wide put spread (front $2.10 + back $2.60)]
+  AXON  FF=+39.1% debit=$17.30 → not ready [wide put spread (front $7.80 + back $3.10)]
+  PTCT  FF=+35.0% debit=$3.10 → not ready [wide put spread (front $0.50 + back $3.00)]
+  STE   FF=+34.9% debit=$-7.70 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  JCI   FF=+30.6% debit=$2.10 → not ready [wide put spread (front $0.60 + back $0.70)]
+  CAR   FF=+35.4% debit=$10.30 → not ready [wide put spread (front $3.80 + back $3.00)]
+  QLYS  FF=+30.6% debit=$2.70 → not ready [wide put spread (front $2.00 + back $4.20)]
+  MAR   FF=+34.7% debit=$6.30 → not ready [wide put spread (front $1.90 + back $1.80)]
+  CPK   FF=+28.5% debit=$16.25 → not ready [wide put spread (front $3.95 + back $3.50)]
+  MRK   FF=+29.8% debit=$2.10 → READY
+  DIS   FF=+29.7% debit=$0.95 → READY
+  ALG   FF=+28.0% debit=$-6.40 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  PLNT  FF=+28.3% debit=$1.20 → READY
+  BR    FF=+27.5% debit=$4.30 → not ready [wide put spread (front $1.70 + back $2.10)]
+  HIMS  FF=+29.1% debit=$1.55 → not ready [wide put spread (front $1.30 + back $0.50)]
+  PLUS  FF=+27.5% debit=$-4.50 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  BCO   FF=+26.8% debit=$7.40 → not ready [wide put spread (front $0.35 + back $1.00)]
+  STRL  FF=+26.6% debit=$17.00 → not ready [wide put spread (front $5.10 + back $11.20)]
+  BROS  FF=+27.4% debit=$1.40 → not ready [wide put spread (front $0.60 + back $0.50)]
+  FIS   FF=+26.6% debit=$1.55 → not ready [FF signal gone: live FF 13.9% < 16% (was 26.6% at scan)]
+  LYV   FF=+26.0% debit=$4.60 → not ready [wide put spread (front $1.90 + back $2.30)]
+  EMR   FF=+25.7% debit=$3.50 → not ready [wide put spread (front $2.40 + back $0.60)]
+  ANET  FF=+25.6% debit=$5.95 → not ready [wide put spread (front $1.15 + back $1.10)]
+  GOLF  FF=+24.5% debit=$3.00 → not ready [unquoted legs: front call bid — illiquid / market closed]
+  ETN   FF=+24.5% debit=$7.00 → not ready [wide put spread (front $3.10 + back $3.20)]
+  ENS   FF=+24.4% debit=$4.80 → not ready [wide put spread (front $2.00 + back $2.50)]
+  HP    FF=+24.0% debit=$0.95 → not ready [FF signal gone: live FF 11.4% < 16% (was 24.0% at scan)]
+  CACI  FF=+23.9% debit=$11.60 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  IRM   FF=+24.5% debit=$7.00 → not ready [wide put spread (front $1.20 + back $1.10)]
+  USPH  FF=+23.8% debit=$12.50 → not ready [wide put spread (front $2.40 + back $3.60)]
+  JBTM  FF=+23.4% debit=$-0.60 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  IT    FF=+22.2% debit=$3.70 → not ready [unquoted legs: back call ask — illiquid / market closed]
+  KMT   FF=+22.2% debit=$1.35 → not ready [wide put spread (front $0.35 + back $0.75)]
+  APO   FF=+23.6% debit=$3.10 → not ready [wide put spread (front $1.60 + back $0.80)]
+  IBP   FF=+22.1% debit=$-5.80 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  SR    FF=+21.6% debit=$4.80 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  BRKR  FF=+21.5% debit=$5.90 → not ready [wide put spread (front $2.40 + back $2.20)]
+  CF    FF=+21.8% debit=$4.00 → not ready [wide put spread (front $1.80 + back $0.50)]
+  NOVT  FF=+21.4% debit=$5.10 → not ready [wide put spread (front $3.00 + back $2.80)]
+  LSCC  FF=+21.4% debit=$4.30 → not ready [wide put spread (front $1.40 + back $1.40)]
+  AOSL  FF=+21.3% debit=$1.80 → not ready [wide put spread (front $0.50 + back $1.10)]
+  CDW   FF=+21.1% debit=$2.90 → not ready [wide put spread (front $0.50 + back $1.10)]
+  CMI   FF=+20.4% debit=$11.70 → not ready [wide put spread (front $3.20 + back $3.30)]
+  TDG   FF=+20.3% debit=$78.70 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  EL    FF=+20.5% debit=$4.10 → not ready [wide put spread (front $0.70 + back $0.80)]
+  ADM   FF=+19.7% debit=$1.20 → not ready [FF signal gone: live FF 12.2% < 16% (was 19.7% at scan)]
+  COLL  FF=+19.6% debit=$-0.05 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  EXE   FF=+19.6% debit=$1.30 → not ready [FF signal gone: live FF 13.5% < 16% (was 19.6% at scan)]
+  ACLS  FF=+19.3% debit=$5.40 → not ready [wide put spread (front $1.20 + back $1.20)]
+  APP   FF=+20.0% debit=$12.90 → not ready [wide put spread (front $2.70 + back $1.80)]
+  STEP  FF=+19.3% debit=$2.30 → not ready [wide put spread (front $1.00 + back $1.90)]
+  CXT   FF=+19.2% debit=$3.30 → not ready [unquoted legs: front put bid — illiquid / market closed]
+  SBH   FF=+18.5% debit=$-0.70 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  MCK   FF=+18.6% debit=$8.20 → not ready [wide put spread (front $5.00 + back $6.20)]
+  PENN  FF=+18.4% debit=$1.10 → not ready [wide put spread (front $0.70 + back $0.60)]
+  CEG   FF=+18.6% debit=$3.50 → not ready [wide put spread (front $2.40 + back $0.40)]
+  LAD   FF=+18.1% debit=$4.00 → not ready [wide put spread (front $3.50 + back $2.70)]
+  ZD    FF=+18.0% debit=$8.80 → not ready [wide put spread (front $3.90 + back $3.50)]
+  TER   FF=+18.4% debit=$14.80 → not ready [wide put spread (front $1.90 + back $2.10)]
+  JXN   FF=+17.9% debit=$1.40 → not ready [wide put spread (front $2.00 + back $-8.30)]
+  NVT   FF=+17.7% debit=$2.30 → not ready [wide put spread (front $2.40 + back $3.10)]
+  FOUR  FF=+17.5% debit=$3.10 → not ready [wide put spread (front $1.70 + back $2.10)]
+  PJT   FF=+17.4% debit=$-1.70 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  SPSM  FF=+17.3% debit=$2.75 → not ready [wide put spread (front $2.15 + back $1.80)]
+  DIOD  FF=+16.6% debit=$-11.10 → not ready [unquoted legs: back put ask — illiquid / market closed]
+  VRTX  FF=+17.4% debit=$13.90 → not ready [wide put spread (front $6.80 + back $3.30)]
+  QNST  FF=+16.5% debit=$-0.35 → not ready [credit received instead of debit — likely bad quote from IB]
+  XLY   FF=+17.3% debit=$1.95 → not ready [FF signal gone: live FF 1.0% < 16% (was 17.3% at scan)]
+  ON    FF=+16.3% debit=$3.50 → not ready [FF signal gone: live FF 14.7% < 16% (was 16.3% at scan)]
+  AMD   FF=+17.0% debit=$13.70 → not ready [wide put spread (front $1.45 + back $1.25)]
+
+Saved: /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/trade_recommendations/2026-07-16_trade_recommendations.csv
+
+Entry-ready candidates: 19 / 141 priced
+
+=== TRADE RECOMMENDATIONS ===
+Ticker      FF%    Strike        Front         Back     Debit      Real   MaxLoss
+  TRIP    +69.1%     15.00   2026-08-14   2026-09-18  $  0.60  $  0.90  $    90
+  ZTS     +56.6%     80.00   2026-08-21   2026-09-18  $  1.20  $  1.80  $   180
+  TTD     +56.0%     20.00   2026-08-14   2026-09-18  $  0.58  $  0.87  $    87
+  TSN     +49.3%     57.50   2026-08-21   2026-09-18  $  0.85  $  1.27  $   128
+  UBER    +42.7%     74.00   2026-08-14   2026-09-18  $  1.95  $  2.92  $   292
+  MTCH    +42.4%     40.00   2026-08-21   2026-09-18  $  0.55  $  0.82  $    82
+  CCOI    +40.5%     12.50   2026-08-21   2026-09-18  $  0.55  $  0.82  $    82
+  ABNB    +39.9%    149.00   2026-08-14   2026-09-18  $  2.75  $  4.12  $   412
+  PINS    +37.2%     24.00   2026-08-07   2026-09-18  $  0.85  $  1.27  $   128
+  CELH    +36.6%     31.00   2026-08-14   2026-09-18  $  0.57  $  0.85  $    86
+  MRK     +29.8%    129.00   2026-08-14   2026-09-18  $  2.10  $  3.15  $   315
+  DIS     +29.7%    100.00   2026-08-14   2026-09-18  $  0.95  $  1.43  $   142
+  SGI     +28.7%     75.00   2026-08-21   2026-09-18  $  1.20  $  1.80  $   180
+  PLNT    +28.3%     55.00   2026-08-21   2026-09-18  $  1.20  $  1.80  $   180
+  CC      +26.5%     19.00   2026-08-14   2026-09-18  $  1.45  $  2.17  $   218
+  LZ      +25.1%      8.00   2026-08-21   2026-09-18  $  1.10  $  1.65  $   165
+  MNST    +24.3%    100.00   2026-08-21   2026-09-18  $  1.20  $  1.80  $   180
+  HTZ     +16.8%      2.00   2026-08-14   2026-09-18  $  0.13  $  0.20  $    20
+  SMCI    +16.0%     26.00   2026-08-14   2026-09-18  $  1.10  $  1.65  $   165
+
+TICKET — TRIP | Strike 15.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.90 debit (mid, work up)
+TICKET — ZTS | Strike 80.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.80 debit (mid, work up)
+TICKET — TTD | Strike 20.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.87 debit (mid, work up)
+TICKET — TSN | Strike 57.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.27 debit (mid, work up)
+TICKET — UBER | Strike 74.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $2.92 debit (mid, work up)
+TICKET — MTCH | Strike 40.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.82 debit (mid, work up)
+TICKET — CCOI | Strike 12.5 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.82 debit (mid, work up)
+TICKET — ABNB | Strike 149.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $4.12 debit (mid, work up)
+TICKET — PINS | Strike 24.0 | SELL 2026-08-07 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.27 debit (mid, work up)
+TICKET — CELH | Strike 31.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.85 debit (mid, work up)
+TICKET — MRK | Strike 129.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $3.15 debit (mid, work up)
+TICKET — DIS | Strike 100.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.43 debit (mid, work up)
+TICKET — SGI | Strike 75.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.80 debit (mid, work up)
+TICKET — PLNT | Strike 55.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.80 debit (mid, work up)
+TICKET — CC | Strike 19.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $2.17 debit (mid, work up)
+TICKET — LZ | Strike 8.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.65 debit (mid, work up)
+TICKET — MNST | Strike 100.0 | SELL 2026-08-21 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.80 debit (mid, work up)
+TICKET — HTZ | Strike 2.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $0.20 debit (mid, work up)
+TICKET — SMCI | Strike 26.0 | SELL 2026-08-14 straddle (call+put) | BUY 2026-09-18 straddle (call+put) | Limit $1.65 debit (mid, work up)
+
+HTML reports → /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-16
+  141 reports (19 entry-ready, 122 priced/not-ready)
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/2026-07-16/index.html  ← today's summary
+  /home/fabien/Documents/InvestmentDeskAgents/research/strategies/calendar-spread-forward-factor/reports/index.html  ← master dashboard
+
+Ready stats → ready_stats.json (6 proven-ready ticker(s) tracked)
+  HTZ 71%, LZ 71%, PINS 71%, SMCI 57%, TTD 57%, MNST 50%

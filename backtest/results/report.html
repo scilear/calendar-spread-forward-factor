@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>FF Calendar Backtest T6b</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  body{font-family:monospace;background:#1a1a2e;color:#e0e0e0;margin:24px}
+  h1{color:#00d4ff}h2{color:#aaa;border-bottom:1px solid #333;padding-bottom:4px}
+  .meta{color:#888;font-size:.9em;margin-bottom:12px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+  .box{background:#16213e;border-radius:8px;padding:16px}
+  canvas{max-height:260px}
+  table{border-collapse:collapse;width:100%;font-size:.85em;margin-top:8px}
+  th,td{padding:5px 10px;text-align:right;border:1px solid #333}
+  th{background:#333;color:#aaa;text-align:center}
+  tr:nth-child(even){background:#1f2f4f}
+</style></head><body>
+<h1>FF Calendar Backtest — T6b</h1>
+<div class="meta">
+  2026-06-15 &nbsp;|&nbsp; Candidates: 33390 &nbsp;|&nbsp;
+  Priced: 108 &nbsp;|&nbsp; Drop rate: 99.7% &nbsp;|&nbsp;
+  IS (2022–23): 33390 &nbsp;|&nbsp; OOS (2024–25): 0
+</div>
+<div class="meta">
+  <b>Overall mid-to-mid:</b> Win 49.1% &nbsp;Avg +11.8% &nbsp;|&nbsp;
+  <b>Overall bid/ask-cross:</b> Win 0.0% &nbsp;Avg -116.6%
+</div>
+<p style="color:#ffaa00">⚠ Drop rate &gt; 25% — check Dolt exit-date coverage.</p>
+<div class="grid">
+  <div class="box"><h2>Win Rate by Composite Score (mid)</h2><canvas id="c1"></canvas></div>
+  <div class="box"><h2>Avg P&amp;L % by Score Tier</h2><canvas id="c2"></canvas></div>
+  <div class="box"><h2>Win Rate by FF Quality Score</h2><canvas id="c3"></canvas></div>
+  <div class="box"><h2>Mid vs Cross Gap (IS)</h2><canvas id="c4"></canvas></div>
+</div>
+<h2>Detail — Composite Score Tiers</h2>
+<table>
+<tr><th>Score</th><th>Period</th><th>N</th>
+<th>Win% mid</th><th>Avg P&amp;L mid</th><th>Median mid</th>
+<th>Win% cross</th><th>Avg P&amp;L cross</th><th>Max loss</th></tr>
+<tr><td>0–40</td><td>IS</td><td>18</td><td>50.0%</td><td style='color:tomato'>-2.7%</td><td>+14.3%</td><td>0%</td><td style='color:tomato'>-101.4%</td><td style='color:tomato'>-266.7%</td></tr>
+<tr><td>40–60</td><td>IS</td><td>65</td><td>43.1%</td><td style='color:green'>+9.5%</td><td>+0.0%</td><td>0%</td><td style='color:tomato'>-126.8%</td><td style='color:tomato'>-356.0%</td></tr>
+<tr><td>60–80</td><td>IS</td><td>19</td><td>63.2%</td><td style='color:green'>+25.2%</td><td>+13.0%</td><td>0%</td><td style='color:tomato'>-104.3%</td><td style='color:tomato'>-265.1%</td></tr>
+<tr><td>80+</td><td>IS</td><td>6</td><td>66.7%</td><td style='color:green'>+37.3%</td><td>+53.3%</td><td>0%</td><td style='color:tomato'>-81.2%</td><td style='color:tomato'>0.0%</td></tr>
+<tr><td>0–40</td><td>OOS</td><td>0</td><td>0%</td><td style='color:tomato'>+0.0%</td><td>+0.0%</td><td>0%</td><td style='color:tomato'>+0.0%</td><td style='color:tomato'>0.0%</td></tr>
+<tr><td>40–60</td><td>OOS</td><td>0</td><td>0%</td><td style='color:tomato'>+0.0%</td><td>+0.0%</td><td>0%</td><td style='color:tomato'>+0.0%</td><td style='color:tomato'>0.0%</td></tr>
+<tr><td>60–80</td><td>OOS</td><td>0</td><td>0%</td><td style='color:tomato'>+0.0%</td><td>+0.0%</td><td>0%</td><td style='color:tomato'>+0.0%</td><td style='color:tomato'>0.0%</td></tr>
+<tr><td>80+</td><td>OOS</td><td>0</td><td>0%</td><td style='color:tomato'>+0.0%</td><td>+0.0%</td><td>0%</td><td style='color:tomato'>+0.0%</td><td style='color:tomato'>0.0%</td></tr>
+
+</table>
+<script>
+const opts = (yLabel) => ({
+  plugins:{legend:{labels:{color:'#aaa'}}},
+  scales:{
+    y:{title:{display:true,text:yLabel,color:'#888'},ticks:{color:'#aaa'},grid:{color:'#333'}},
+    x:{ticks:{color:'#aaa'},grid:{color:'#333'}}
+  }
+});
+new Chart('c1',{type:'bar',data:{labels:["0\u201340", "40\u201360", "60\u201380", "80+"],datasets:[
+  {label:'IS',data:[50.0, 43.1, 63.2, 66.7],backgroundColor:'rgba(0,212,255,.7)'},
+  {label:'OOS',data:[0, 0, 0, 0],backgroundColor:'rgba(255,140,0,.7)'}
+]},options:{...opts('%'),scales:{...opts('%').scales,y:{...opts('%').scales.y,min:0,max:100}}}});
+new Chart('c2',{type:'bar',data:{labels:["0\u201340", "40\u201360", "60\u201380", "80+"],datasets:[
+  {label:'IS mid',data:[-2.69, 9.47, 25.19, 37.32],backgroundColor:'rgba(0,212,255,.7)'},
+  {label:'OOS mid',data:[0, 0, 0, 0],backgroundColor:'rgba(255,140,0,.7)'},
+  {label:'IS cross',data:[-101.37, -126.76, -104.33, -81.17],backgroundColor:'rgba(100,255,130,.5)'},
+  {label:'OOS cross',data:[0, 0, 0, 0],backgroundColor:'rgba(255,80,80,.5)'}
+]},options:opts('Avg P&L %')});
+new Chart('c3',{type:'bar',data:{labels:["0\u20135", "5\u20138", "8\u201310", "10"],datasets:[
+  {label:'IS',data:[49.4, 50.0, 35.7, 66.7],backgroundColor:'rgba(160,100,255,.7)'},
+  {label:'OOS',data:[0, 0, 0, 0],backgroundColor:'rgba(255,200,50,.7)'}
+]},options:{...opts('%'),scales:{...opts('%').scales,y:{...opts('%').scales.y,min:0,max:100}}}});
+new Chart('c4',{type:'bar',data:{labels:["0\u201340", "40\u201360", "60\u201380", "80+"],datasets:[
+  {label:'IS mid',data:[-2.69, 9.47, 25.19, 37.32],backgroundColor:'rgba(0,212,255,.7)'},
+  {label:'IS cross',data:[-101.37, -126.76, -104.33, -81.17],backgroundColor:'rgba(255,80,80,.7)'}
+]},options:opts('Avg P&L %')});
+</script></body></html>

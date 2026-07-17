@@ -1,0 +1,102 @@
+FF Full Backtest  2020-01-01 → 2025-12-31
+Tickers (227): AAPL, MSFT, AMZN, GOOGL, META, NVDA, TSLA, AMD, INTC, QCOM, AMAT, LRCX, KLAC, ADBE, CRM, ORCL, CSCO, IBM, TXN, MU, NFLX, ADSK, INTU, AVGO, NOW, SNPS, CDNS, PANW, FTNT, SPY, DIA, MDY, XLK, XLF, XLV, XLE, XLI, XLU, XLY, XLP, XLB, XLC, XLRE, XBI, XRT, XHB, XME, XOP, KRE, XSD, XAR, JPM, BAC, GS, MS, C, WFC, USB, PNC, COF, SCHW, BLK, AXP, V, MA, SPGI, MCO, CME, ICE, CB, TRV, AIG, PRU, MET, AFL, UNH, CVS, JNJ, PFE, MRK, ABBV, BMY, GILD, AMGN, REGN, BIIB, VRTX, MDT, ABT, DHR, TMO, HUM, EW, ILMN, ISRG, SYK, BSX, XOM, CVX, COP, EOG, OXY, DVN, HAL, SLB, MPC, VLO, PSX, HES, FCX, WMT, HD, TGT, LOW, COST, SBUX, MCD, NKE, KO, PEP, MO, PM, MDLZ, CL, PG, KR, DLTR, DG, TJX, ROST, EL, ULTA, LULU, CAT, BA, HON, GE, RTX, LMT, NOC, GD, MMM, DE, EMR, ITW, FDX, UPS, NSC, UNP, CSX, WM, RSG, CTAS, FAST, DIS, CMCSA, T, VZ, TMUS, CHTR, FOXA, ABNB, UBER, RCL, MAR, HLT, DAL, UAL, LVS, WYNN, MGM, EXPE, BKNG, CMG, DPZ, YUM, NEE, DUK, SO, EXC, AEP, D, PEG, XEL, ETR, EIX, PCG, PLD, AMT, CCI, EQIX, SPG, O, DLR, WELL, VTR, EQR, LLY, CAH, MCK, SHW, ECL, APD, PPG, LIN, DOW, DD, EMN, FICO, VRSK, MSCI, IQV, A, DHI, LEN, PHM, NUE, ADM, CF, FMC, MOS, VMC, MLM, URI, PWR, LDOS, LHX
+
+Fetching available Dolt dates ...
+    2020-01-01 .. 2020-03-31: 37 dates
+    2020-04-01 .. 2020-06-30: 38 dates
+    2020-07-01 .. 2020-09-30: 40 dates
+    2020-10-01 .. 2020-12-31: 37 dates
+    2021-01-01 .. 2021-03-31: 37 dates
+    2021-04-01 .. 2021-06-30: 37 dates
+    2021-07-01 .. 2021-09-30: 38 dates
+    2021-10-01 .. 2021-12-31: 39 dates
+    2022-01-01 .. 2022-03-31: 37 dates
+    2022-04-01 .. 2022-06-30: 36 dates
+    2022-07-01 .. 2022-09-30: 40 dates
+    2022-10-01 .. 2022-12-31: 38 dates
+    2023-01-01 .. 2023-03-31: 37 dates
+    2023-04-01 .. 2023-06-30: 37 dates
+    2023-07-01 .. 2023-09-30: 38 dates
+    2023-10-01 .. 2023-12-31: 39 dates
+    2024-01-01 .. 2024-03-31: 39 dates
+    2024-04-01 .. 2024-06-30: 39 dates
+    2024-07-01 .. 2024-09-30: 40 dates
+    2024-10-01 .. 2024-12-31: 64 dates
+    2025-01-01 .. 2025-03-31: 64 dates
+    2025-04-01 .. 2025-06-30: 65 dates
+    2025-07-01 .. 2025-09-30: 63 dates
+    2025-10-01 .. 2025-12-31: 66 dates
+  1045 dates  (2020-01-04 .. 2025-12-31)
+  [20/1045]  2020-02-19  live=578
+  [40/1045]  2020-04-06  live=437
+  [60/1045]  2020-05-25  live=586
+  [80/1045]  2020-07-10  live=291
+  [100/1045]  2020-08-26  live=635
+  [120/1045]  2020-10-12  live=461
+  [140/1045]  2020-11-30  live=665
+  [160/1045]  2021-01-18  live=388
+  [180/1045]  2021-03-05  live=322
+  [200/1045]  2021-04-26  live=579
+  [220/1045]  2021-06-16  live=148
+  [240/1045]  2021-08-04  live=655
+  [260/1045]  2021-09-20  live=410
+  [280/1045]  2021-11-05  live=428
+  [300/1045]  2021-12-24  live=370
+  [320/1045]  2022-02-09  live=555
+  [340/1045]  2022-03-30  live=792
+  [360/1045]  2022-05-18  live=719
+  [380/1045]  2022-07-08  live=240
+  [400/1045]  2022-08-24  live=638
+  [420/1045]  2022-10-10  live=580
+  [440/1045]  2022-11-28  live=706
+  [460/1045]  2023-01-13  live=604
+  [480/1045]  2023-03-06  live=650
+  [500/1045]  2023-04-21  live=776
+  [520/1045]  2023-06-12  live=469
+  [540/1045]  2023-07-31  live=643
+  [560/1045]  2023-09-15  live=392
+  [580/1045]  2023-11-03  live=845
+  [600/1045]  2023-12-18  live=384
+  [620/1045]  2024-02-02  live=324
+  [640/1045]  2024-03-20  live=562
+  [660/1045]  2024-05-06  live=724
+  [680/1045]  2024-06-21  live=660
+  [700/1045]  2024-08-19  live=403
+  [720/1045]  2024-09-25  live=584
+  [740/1045]  2024-10-23  live=638
+  [760/1045]  2024-11-22  live=939
+  [780/1045]  2024-12-20  live=1342
+  [800/1045]  2025-01-17  live=860
+  [820/1045]  2025-02-14  live=838
+  [840/1045]  2025-03-14  live=864
+  [860/1045]  2025-04-11  live=883
+  [880/1045]  2025-05-09  live=878
+  [900/1045]  2025-06-06  live=929
+  [920/1045]  2025-07-04  live=791
+  [940/1045]  2025-08-01  live=1184
+  [960/1045]  2025-09-02  live=1209
+  [980/1045]  2025-10-01  live=751
+  [1000/1045]  2025-10-29  live=828
+  [1020/1045]  2025-11-26  live=822
+  [1040/1045]  2025-12-24  live=595
+
+Total trades: 177399
+Total path rows: 575576
+
+  Year  trades with_exit   FF>0%   FF>16%    exit_reason: expiry/roll/eod
+  2020   24339     15415     53%      25%   3510 / 20546 /    0
+  2021   25082     16117     39%      14%   3643 / 21365 /    0
+  2022   25154     15863     51%      16%   3902 / 21214 /    0
+  2023   26509     16794     41%      18%   4217 / 22226 /    0
+  2024   31501     21982     43%      25%   4824 / 26552 /    0
+  2025   44814     34877     48%      27%   6984 / 36686 /  924
+
+FF distribution (n=176275): p10=-23.5  p25=-12.4  med=-1.5  p75=13.1  p90=32.2
+  FF >  0%: 81912 trades (46.5%)
+  FF >  8%: 56010 trades (31.8%)
+  FF > 12%: 46426 trades (26.3%)
+  FF > 16%: 38649 trades (21.9%)
+  FF > 20%: 32004 trades (18.2%)
+
+Saved 177399 trades → ff_all_trades.csv
+Saved 575576 path rows → ff_daily_paths.csv

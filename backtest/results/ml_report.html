@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>CSFF ML Analysis</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  body{font-family:monospace;background:#1a1a2e;color:#e0e0e0;margin:24px;line-height:1.5}
+  h1{color:#00d4ff} h2{color:#aaa;border-bottom:1px solid #333;padding-bottom:4px}
+  .meta{color:#888;font-size:.9em;margin-bottom:16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:24px}
+  .box{background:#16213e;border-radius:8px;padding:16px}
+  .stat{font-size:1.6em;color:#00d4ff;font-weight:bold}
+  .sublabel{color:#888;font-size:.8em}
+  canvas{max-height:240px}
+  table{border-collapse:collapse;width:100%;font-size:.83em;margin-top:8px}
+  th,td{padding:4px 10px;text-align:right;border:1px solid #333}
+  th{background:#2a3a5e;color:#aaa;text-align:center}
+  tr:nth-child(even){background:#1c2a45}
+  .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.8em}
+  .green{background:#1a3a2a;color:#00ff88} .red{background:#3a1a1a;color:#ff6060}
+  .warn{color:#ffaa00;font-size:.9em}
+</style></head><body>
+
+<h1>CSFF — ML Analysis</h1>
+<div class="meta">Generated 2026-06-17 &nbsp;|&nbsp; OOS 2024-2025 &nbsp;|&nbsp; Earnings-risk filtered</div>
+
+<div class="grid3">
+  <div class="box">
+    <div class="sublabel">Straddle Cal — Priced Trades</div>
+    <div class="stat">3,990</div>
+    <div class="sublabel">Win 43.7% &nbsp; Avg P&amp;L +14.6%</div>
+  </div>
+  <div class="box">
+    <div class="sublabel">Put Cal — Priced Trades</div>
+    <div class="stat">3,674</div>
+    <div class="sublabel">Win 35.7% &nbsp; Avg P&amp;L +7.9%</div>
+  </div>
+  <div class="box">
+    <div class="sublabel">XGBoost CV AUC (time-series)</div>
+    <div class="stat">0.689</div>
+    <div class="sublabel">Straddle &nbsp;|&nbsp; Put: 0.697</div>
+  </div>
+</div>
+
+<h2>Model Performance Summary</h2>
+<div class="grid">
+<div class="box">
+  <h2 style="color:#aaa;font-size:1em">Straddle Calendar</h2>
+  <table>
+  <tr><th>Model</th><th>AUC (in-sample train)</th></tr>
+  <tr><td>Logistic Regression</td><td>0.704</td></tr>
+  <tr><td>Random Forest</td><td>0.759</td></tr>
+  <tr><td>XGBoost</td><td>0.916</td></tr>
+  <tr><td><b>CV Mean AUC (time-series)</b></td><td><b>0.689</b></td></tr>
+  <tr><td>CV Top-30% Win Rate</td><td>66.0%</td></tr>
+  <tr><td>CV Top-30% Avg P&amp;L</td><td>+60.4%</td></tr>
+  </table>
+</div>
+<div class="box">
+  <h2 style="color:#aaa;font-size:1em">Put Calendar</h2>
+  <table>
+  <tr><th>Model</th><th>AUC (in-sample train)</th></tr>
+  <tr><td>Logistic Regression</td><td>0.699</td></tr>
+  <tr><td>Random Forest</td><td>0.765</td></tr>
+  <tr><td>XGBoost</td><td>0.929</td></tr>
+  <tr><td><b>CV Mean AUC (time-series)</b></td><td><b>0.697</b></td></tr>
+  <tr><td>CV Top-30% Win Rate</td><td>57.5%</td></tr>
+  <tr><td>CV Top-30% Avg P&amp;L</td><td>+41.6%</td></tr>
+  </table>
+</div>
+</div>
+
+<div class="grid">
+  <div class="box"><h2>Straddle — Win Rate by Predicted Decile (OOS)</h2><canvas id="c_str_dec"></canvas></div>
+  <div class="box"><h2>Put Cal — Win Rate by Predicted Decile (OOS)</h2><canvas id="c_put_dec"></canvas></div>
+</div>
+
+<div class="grid">
+  <div class="box"><h2>SHAP Feature Importance — Straddle</h2>
+    <table><tr><th style="text-align:left">Feature</th><th>Bar</th><th>SHAP</th></tr>
+    <tr><td style='text-align:left'>debit_pct_spot</td><td><div style='width:100%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.7115</td></tr>
+<tr><td style='text-align:left'>back_iv</td><td><div style='width:41%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.2894</td></tr>
+<tr><td style='text-align:left'>iv_hv_ratio</td><td><div style='width:25%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1785</td></tr>
+<tr><td style='text-align:left'>comm_to_debit_pct</td><td><div style='width:23%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1615</td></tr>
+<tr><td style='text-align:left'>iv_spread</td><td><div style='width:22%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1593</td></tr>
+<tr><td style='text-align:left'>ff_pct</td><td><div style='width:22%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1532</td></tr>
+<tr><td style='text-align:left'>days_to_earnings</td><td><div style='width:21%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1496</td></tr>
+<tr><td style='text-align:left'>iv_rank_20d</td><td><div style='width:17%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1241</td></tr>
+<tr><td style='text-align:left'>trend_strength</td><td><div style='width:16%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1143</td></tr>
+<tr><td style='text-align:left'>back_dte</td><td><div style='width:11%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.0757</td></tr>
+<tr><td style='text-align:left'>ff_quality_pts</td><td><div style='width:10%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.0692</td></tr>
+<tr><td style='text-align:left'>front_iv</td><td><div style='width:10%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.0687</td></tr>
+</table>
+  </div>
+  <div class="box"><h2>SHAP Feature Importance — Put Calendar</h2>
+    <table><tr><th style="text-align:left">Feature</th><th>Bar</th><th>SHAP</th></tr>
+    <tr><td style='text-align:left'>put_debit_pct_spot</td><td><div style='width:100%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.7751</td></tr>
+<tr><td style='text-align:left'>back_iv</td><td><div style='width:41%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.3164</td></tr>
+<tr><td style='text-align:left'>comm_to_debit_pct_put</td><td><div style='width:28%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.2155</td></tr>
+<tr><td style='text-align:left'>iv_spread</td><td><div style='width:20%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1515</td></tr>
+<tr><td style='text-align:left'>days_to_earnings</td><td><div style='width:19%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1459</td></tr>
+<tr><td style='text-align:left'>ff_pct</td><td><div style='width:16%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1246</td></tr>
+<tr><td style='text-align:left'>iv_hv_ratio</td><td><div style='width:16%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1232</td></tr>
+<tr><td style='text-align:left'>trend_strength</td><td><div style='width:14%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1089</td></tr>
+<tr><td style='text-align:left'>iv_rank_20d</td><td><div style='width:14%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.1063</td></tr>
+<tr><td style='text-align:left'>front_dte</td><td><div style='width:10%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.0738</td></tr>
+<tr><td style='text-align:left'>back_dte</td><td><div style='width:9%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.0667</td></tr>
+<tr><td style='text-align:left'>front_iv</td><td><div style='width:8%;background:#00d4ff;height:12px;border-radius:3px'></div></td><td>0.0655</td></tr>
+</table>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="box"><h2>Univariate Spearman Correlation (win vs feature) — Straddle</h2>
+    <table><tr><th>Feature</th><th>ρ</th><th>p-val</th><th>n</th><th>sig?</th></tr>
+    <tr><td style='text-align:left'>debit_pct_spot</td><td style='color:#ff6060'>-0.2831</td><td>0.000</td><td>3990</td><td></td></tr>
+<tr><td style='text-align:left'>comm_to_debit_pct</td><td style='color:#00d4ff'>+0.1248</td><td>0.000</td><td>3990</td><td></td></tr>
+<tr><td style='text-align:left'>iv_hv_ratio</td><td style='color:#ff6060'>-0.1085</td><td>0.000</td><td>3988</td><td></td></tr>
+<tr><td style='text-align:left'>front_iv</td><td style='color:#ff6060'>-0.0954</td><td>0.000</td><td>3990</td><td></td></tr>
+<tr><td style='text-align:left'>ff_pct</td><td style='color:#ff6060'>-0.0910</td><td>0.000</td><td>3990</td><td></td></tr>
+<tr><td style='text-align:left'>front_dte</td><td style='color:#00d4ff'>+0.0805</td><td>0.000</td><td>3990</td><td></td></tr>
+<tr><td style='text-align:left'>back_iv</td><td style='color:#ff6060'>-0.0706</td><td>0.000</td><td>3990</td><td></td></tr>
+<tr><td style='text-align:left'>iv_spread</td><td style='color:#00d4ff'>+0.0629</td><td>0.000</td><td>3990</td><td>✓</td></tr>
+<tr><td style='text-align:left'>back_dte</td><td style='color:#00d4ff'>+0.0543</td><td>0.001</td><td>3990</td><td>✓</td></tr>
+<tr><td style='text-align:left'>trend_strength</td><td style='color:#00d4ff'>+0.0473</td><td>0.003</td><td>3989</td><td>✓</td></tr>
+<tr><td style='text-align:left'>trend_pts</td><td style='color:#ff6060'>-0.0345</td><td>0.029</td><td>3990</td><td>✓</td></tr>
+<tr><td style='text-align:left'>ff_quality_pts</td><td style='color:#ff6060'>-0.0220</td><td>0.164</td><td>3990</td><td></td></tr>
+</table>
+  </div>
+  <div class="box"><h2>Univariate Spearman Correlation (win vs feature) — Put Cal</h2>
+    <table><tr><th>Feature</th><th>ρ</th><th>p-val</th><th>n</th><th>sig?</th></tr>
+    <tr><td style='text-align:left'>put_debit_pct_spot</td><td style='color:#ff6060'>-0.2800</td><td>0.000</td><td>3756</td><td></td></tr>
+<tr><td style='text-align:left'>comm_to_debit_pct_put</td><td style='color:#00d4ff'>+0.1278</td><td>0.000</td><td>3756</td><td></td></tr>
+<tr><td style='text-align:left'>iv_hv_ratio</td><td style='color:#ff6060'>-0.1030</td><td>0.000</td><td>3754</td><td></td></tr>
+<tr><td style='text-align:left'>front_iv</td><td style='color:#ff6060'>-0.0878</td><td>0.000</td><td>3756</td><td></td></tr>
+<tr><td style='text-align:left'>ff_pct</td><td style='color:#ff6060'>-0.0872</td><td>0.000</td><td>3756</td><td></td></tr>
+<tr><td style='text-align:left'>front_dte</td><td style='color:#00d4ff'>+0.0860</td><td>0.000</td><td>3756</td><td></td></tr>
+<tr><td style='text-align:left'>iv_spread</td><td style='color:#00d4ff'>+0.0659</td><td>0.000</td><td>3756</td><td>✓</td></tr>
+<tr><td style='text-align:left'>back_iv</td><td style='color:#ff6060'>-0.0586</td><td>0.000</td><td>3756</td><td>✓</td></tr>
+<tr><td style='text-align:left'>back_dte</td><td style='color:#00d4ff'>+0.0442</td><td>0.007</td><td>3756</td><td>✓</td></tr>
+<tr><td style='text-align:left'>trend_strength</td><td style='color:#00d4ff'>+0.0421</td><td>0.010</td><td>3755</td><td>✓</td></tr>
+<tr><td style='text-align:left'>iv_rank_20d</td><td style='color:#ff6060'>-0.0374</td><td>0.022</td><td>3747</td><td>✓</td></tr>
+<tr><td style='text-align:left'>trend_pts</td><td style='color:#ff6060'>-0.0315</td><td>0.053</td><td>3756</td><td></td></tr>
+</table>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="box"><h2>Straddle — P&amp;L by Decile (OOS)</h2>
+    <table><tr><th>Decile</th><th>N</th><th>Pred%</th><th>Win%</th><th>Avg P&amp;L</th></tr>
+    <tr><td>D1</td><td>382</td><td>10%</td><td>0.0%</td><td style='color:#ff6060'>-42.7%</td></tr>
+<tr><td>D2</td><td>381</td><td>21%</td><td>2.1%</td><td style='color:#ff6060'>-31.1%</td></tr>
+<tr><td>D3</td><td>381</td><td>29%</td><td>9.2%</td><td style='color:#ff6060'>-27.2%</td></tr>
+<tr><td>D4</td><td>381</td><td>36%</td><td>18.4%</td><td style='color:#ff6060'>-20.6%</td></tr>
+<tr><td>D5</td><td>381</td><td>44%</td><td>28.1%</td><td style='color:#ff6060'>-14.5%</td></tr>
+<tr><td>D6</td><td>382</td><td>52%</td><td>43.2%</td><td style='color:#ff6060'>-3.5%</td></tr>
+<tr><td>D7</td><td>381</td><td>60%</td><td>64.3%</td><td style='color:#00ff88'>+24.2%</td></tr>
+<tr><td>D8</td><td>381</td><td>67%</td><td>81.1%</td><td style='color:#00ff88'>+43.4%</td></tr>
+<tr><td>D9</td><td>381</td><td>75%</td><td>90.8%</td><td style='color:#00ff88'>+85.3%</td></tr>
+<tr><td>D10</td><td>381</td><td>85%</td><td>98.4%</td><td style='color:#00ff88'>+131.3%</td></tr>
+</table>
+  </div>
+  <div class="box"><h2>Put Cal — P&amp;L by Decile (OOS)</h2>
+    <table><tr><th>Decile</th><th>N</th><th>Pred%</th><th>Win%</th><th>Avg P&amp;L</th></tr>
+    <tr><td>D1</td><td>351</td><td>11%</td><td>0.3%</td><td style='color:#ff6060'>-39.7%</td></tr>
+<tr><td>D2</td><td>350</td><td>19%</td><td>0.6%</td><td style='color:#ff6060'>-32.3%</td></tr>
+<tr><td>D3</td><td>351</td><td>25%</td><td>1.4%</td><td style='color:#ff6060'>-34.5%</td></tr>
+<tr><td>D4</td><td>350</td><td>31%</td><td>3.7%</td><td style='color:#ff6060'>-31.8%</td></tr>
+<tr><td>D5</td><td>350</td><td>38%</td><td>14.0%</td><td style='color:#ff6060'>-22.2%</td></tr>
+<tr><td>D6</td><td>351</td><td>46%</td><td>35.0%</td><td style='color:#ff6060'>-6.4%</td></tr>
+<tr><td>D7</td><td>350</td><td>54%</td><td>50.0%</td><td style='color:#00ff88'>+10.1%</td></tr>
+<tr><td>D8</td><td>351</td><td>64%</td><td>70.1%</td><td style='color:#00ff88'>+31.7%</td></tr>
+<tr><td>D9</td><td>350</td><td>74%</td><td>82.9%</td><td style='color:#00ff88'>+65.1%</td></tr>
+<tr><td>D10</td><td>350</td><td>87%</td><td>97.1%</td><td style='color:#00ff88'>+138.1%</td></tr>
+</table>
+  </div>
+</div>
+
+<script>
+const chartOpts = (yLabel) => ({
+  plugins:{legend:{labels:{color:'#aaa'}}},
+  scales:{
+    y:{title:{display:true,text:yLabel,color:'#888'},ticks:{color:'#aaa'},grid:{color:'#333'}},
+    x:{ticks:{color:'#aaa'},grid:{color:'#333'}}
+  }
+});
+
+new Chart('c_str_dec',{type:'bar',data:{
+  labels:["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10"],
+  datasets:[
+    {label:'Win %',data:[0.0, 2.099737532808399, 9.186351706036746, 18.37270341207349, 28.083989501312335, 43.19371727748691, 64.30446194225722, 81.10236220472441, 90.81364829396325, 98.4251968503937],backgroundColor:'rgba(0,212,255,.7)',yAxisID:'y'},
+    {label:'Avg P&L %',data:[-42.74075916230366, -31.100761154855647, -27.158293963254593, -20.555643044619423, -14.507690288713912, -3.5088481675392673, 24.188320209973753, 43.375433070866144, 85.27451443569554, 131.262624671916],backgroundColor:'rgba(255,180,0,.7)',type:'line',yAxisID:'y2'}
+  ]
+},options:{...chartOpts('Win %'),scales:{
+  y:{title:{display:true,text:'Win %',color:'#888'},ticks:{color:'#aaa'},grid:{color:'#333'},min:0,max:100},
+  y2:{position:'right',title:{display:true,text:'Avg P&L %',color:'#888'},ticks:{color:'#aaa'},grid:{drawOnChartArea:false}}
+}}});
+
+new Chart('c_put_dec',{type:'bar',data:{
+  labels:["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10"],
+  datasets:[
+    {label:'Win %',data:[0.2849002849002849, 0.5714285714285714, 1.4245014245014245, 3.7142857142857144, 14.000000000000002, 35.04273504273504, 50.0, 70.08547008547008, 82.85714285714286, 97.14285714285714],backgroundColor:'rgba(160,100,255,.7)',yAxisID:'y'},
+    {label:'Avg P&L %',data:[-39.671452991452995, -32.3422, -34.4565811965812, -31.841828571428568, -22.209142857142858, -6.363105413105413, 10.144971428571429, 31.695071225071228, 65.14074285714287, 138.12782857142858],backgroundColor:'rgba(255,180,0,.7)',type:'line',yAxisID:'y2'}
+  ]
+},options:{...chartOpts('Win %'),scales:{
+  y:{title:{display:true,text:'Win %',color:'#888'},ticks:{color:'#aaa'},grid:{color:'#333'},min:0,max:100},
+  y2:{position:'right',title:{display:true,text:'Avg P&L %',color:'#888'},ticks:{color:'#aaa'},grid:{drawOnChartArea:false}}
+}}});
+</script>
+</body></html>
